@@ -1,0 +1,169 @@
+/* ==========================================================================
+   Blog List - Masonry style - begin
+   ========================================================================== */
+
+.edgtf-blog-holder {
+    &.edgtf-blog-masonry {
+        article {
+            margin: 0 0 20px;
+            padding: 0 0 30px;
+
+            .edgtf-post-heading {
+                margin-bottom: 30px;
+            }
+
+            &.edgtf-post-has-media {
+                .edgtf-post-heading {
+                    margin-bottom: 50px;
+                }
+            }
+
+            &.format-audio,
+            &.format-video {
+                .edgtf-post-heading {
+                    margin-bottom: 30px;
+                }
+            }
+
+            .edgtf-post-content {
+                //border-left: 2px solid $default-border-color;
+                margin-bottom: 32px;
+            }
+
+            .edgtf-post-excerpt-holder {
+                margin: 19px $blog-gutter 0 $blog-gutter;
+
+                p {
+                    margin: 0;
+                }
+            }
+
+            // post info begin
+            .edgtf-post-info-list {
+                margin: 15px $blog-gutter 0 $blog-gutter;
+
+                > div {
+                    position: relative;
+                    display: inline-block;
+                    vertical-align: top;
+                    padding: 0 14px 0 0;
+                    color: $default-text-color;
+                    font-size: 13px;
+                    letter-spacing: .05em;
+
+                    &:after {
+                        content: '-';
+                        position: absolute;
+                        top: 0;
+                        right: -2px;
+                    }
+
+                    &:last-child {
+                        padding: 0;
+
+                        &:after {
+                            content: '';
+                        }
+                    }
+
+                    a {
+                        @include edgtfItalicLink($first-main-color, $default-heading-color, none, !important);
+                    }
+                }
+            }
+
+            .edgtf-post-info-date a {
+                @include edgtfItalicLink();
+            }
+            // post info end
+
+            .edgtf-post-read-more-button {
+                margin: 17px $blog-gutter 0 $blog-gutter;
+            }
+
+            ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            // link
+            &.format-link {
+                //&.edgtf-post-no-media {
+                //    .edgtf-post-content {
+                //        background-color: $first-main-color;
+                //    }
+                //}
+
+                .edgtf-post-content {
+                    border-left: none;
+                    margin-bottom: 0;
+                }
+
+                .edgtf-post-text {
+                    padding: 66px 105px 66px 53px;
+                }
+
+                .edgtf-post-title {
+                    margin: 18px 0 0 0;
+                }
+
+                .edgtf-post-info-list {
+                    margin: 0 !important;
+
+                    > div {
+                        color: $default-heading-color !important;
+
+                        a {
+                            @include edgtfItalicLink($default-heading-color, #fff, none, !important);
+                        }
+                    }
+                }
+            }
+
+            ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            // quote
+            &.format-quote {
+                //&.edgtf-post-no-media {
+                //    .edgtf-post-content {
+                //        background-color: $first-main-color;
+                //    }
+                //}
+
+                .edgtf-post-mark {
+                    right: -41px;
+                    top: -55px;
+                }
+
+                .edgtf-post-content {
+                    border-left: none;
+                    margin-bottom: 0;
+                }
+
+                .edgtf-post-text {
+                    padding: 66px 98px 66px 53px;
+                }
+
+                .edgtf-post-title {
+                    line-height: 1.4em;
+                    margin: 18px 0 0 0;
+                }
+
+                .edgtf-quote-author {
+                    margin: 28px 0 0 0;
+                }
+
+                .edgtf-post-info-list {
+                    margin: 0 !important;
+
+                    > div {
+                        color: #fff !important;
+
+                        a {
+                            @include edgtfItalicLink(#fff, $default-heading-color, none, !important);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+   Blog List - Masonry style - end
+   ========================================================================== */

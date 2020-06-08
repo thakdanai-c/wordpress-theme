@@ -1,0 +1,260 @@
+/* ==========================================================================
+   Header Vertical navigation style - begin
+   ========================================================================== */
+
+.edgtf-header-vertical {
+    .edgtf-vertical-alignment-center {
+        .edgtf-vertical-menu-outer {
+            @include edgtfAbsoluteHolderLayout();
+
+            padding: 100px 0;
+        }
+
+        .edgtf-vertical-menu {
+            display: table;
+            width: 100%;
+            height: 100%;
+            min-height: 0;
+            margin: 0;
+
+            > ul {
+                display: table-cell;
+                width: 100%;
+                height: 100%;
+                vertical-align: middle;
+            }
+        }
+    }
+
+    .edgtf-vertical-menu-outer {
+        @include edgtfRelativeHolderLayout();
+
+        box-sizing: border-box;
+    }
+
+    .edgtf-vertical-menu {
+        @include edgtfRelativeHolderLayout();
+
+        margin: 60px 0;
+        padding: 0;
+        z-index: 100;
+
+        ul {
+            position: relative;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                position: relative;
+                padding: 0;
+                margin: 0;
+
+                a {
+                    position: relative;
+                    display: block;
+                    margin: 0;
+                    padding: 4px 0;
+                    color: $default-text-color;
+                    font-size: 13px;
+                    font-weight: 400;
+                    font-family: $default-heading-font;
+                    letter-spacing: 0.12em;
+                    text-transform: uppercase;
+
+                    &:hover {
+                        color: $first-main-color;
+
+                        //.edgtf-menu-arrow {
+                        //    display: none;
+                        //}
+                    }
+
+                    .item_outer {
+                        position: relative;
+                        display: block;
+                        padding: 0 15px 0 0;
+                        box-sizing: border-box;
+                    }
+
+                    .edgtf-menu-arrow {
+                        display: none;
+                        //position: absolute;
+                        //top: -2px;
+                        //right: 0;
+                        //font-size: 17px;
+                        //line-height: inherit;
+                        //margin: 0;
+                        //
+                        //@include edgtfTransform(rotate(-90deg));
+                        //@include edgtfTransitionTransform(.2s ease-in-out);
+                    }
+
+                    .edgtf-menu-featured-icon {
+                        position: relative;
+                        top: -4px;
+                        left: 3px;
+                        color: $default-heading-color;
+                        font-size: 12px;
+                        margin: 0;
+                    }
+
+                    .menu_icon:not(.blank):not(.null) {
+                        padding: 0 5px 0 0;
+                    }
+                }
+
+                &.open > a,
+                &.current_page_item > a,
+                &.current-menu-item > a {
+                    .edgtf-menu-arrow {
+                        @include edgtfTransform(rotate(0deg));
+                    }
+                }
+
+                &.edgtf-active-item > a,
+                &.current_page_item > a,
+                &.current-menu-item > a
+                &.current-menu-ancestor > a {
+                    color: $first-main-color;
+                }
+
+                ul {
+                    padding: 3px 0;
+
+                    li {
+                        //&.sub {
+                        //    > a {
+                        //        .item_outer {
+                        //            position: relative;
+                        //            display: block;
+                        //
+                        //            &:after {
+                        //                position: absolute;
+                        //                display: inline-block;
+                        //                vertical-align: middle;
+                        //                top: -1px;
+                        //                right: -2px;
+                        //                content: '\f3d3';
+                        //                font-family: 'Ionicons';
+                        //                font-size: 17px;
+                        //                font-weight: normal;
+                        //                font-style: normal;
+                        //                text-rendering: auto;
+                        //                -webkit-font-smoothing: antialiased;
+                        //                -moz-osx-font-smoothing: grayscale;
+                        //            }
+                        //        }
+                        //    }
+                        //
+                        //    &.current_page_item > a,
+                        //    &.current-menu-ancestor > a {
+                        //        .item_outer:after {
+                        //            content: "\f107";
+                        //        }
+                        //    }
+                        //}
+                    }
+                }
+
+                .second {
+                    display: none;
+
+                    @include edgtfTransform(translateZ(0));
+
+                    .inner {
+                        position: relative;
+                        display: block;
+                        padding: 0;
+                        z-index: 997;
+                    }
+                }
+            }
+        }
+
+        > ul {
+            > li {
+                > a {
+                    font-size: 16px;
+                    line-height: 30px;
+                    color: #fff;
+
+                    span.item_text {
+                        position: relative;
+                        display: inline-block;
+                        vertical-align: top;
+                    }
+                }
+
+                &.has_sub {
+                    > a {
+                        .item_outer {
+                            &:before {
+                                content: '\f067';
+                                font-family: FontAwesome;
+                                right: -5px;
+                                position: absolute;
+                                font-size: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.edgtf-light-header.edgtf-header-vertical .edgtf-vertical-menu ul li {
+    a {
+        color: $header-light-color !important;
+
+        &:hover {
+            color: $header-light-hover-color !important;
+        }
+    }
+
+    ul li {
+
+        &.current_page_item > a,
+        &.current-menu-item > a,
+        &.current-menu-ancestor > a {
+            color: $header-light-hover-color !important;
+        }
+    }
+}
+
+.edgtf-light-header.edgtf-header-vertical .edgtf-vertical-menu > ul > li {
+    &.edgtf-active-item > a,
+    &.current-menu-ancestor > a {
+        color: $header-light-hover-color !important;
+    }
+}
+
+.edgtf-dark-header.edgtf-header-vertical .edgtf-vertical-menu ul li {
+    a {
+        color: $header-dark-color !important;
+
+        &:hover {
+            color: $header-dark-hover-color !important;
+        }
+    }
+
+    ul li {
+        &.current_page_item > a,
+        &.current-menu-item > a,
+        &.current-menu-ancestor > a {
+            color: $header-dark-hover-color !important;
+        }
+    }
+}
+
+.edgtf-dark-header.edgtf-header-vertical .edgtf-vertical-menu > ul > li {
+    &.edgtf-active-item > a,
+    &.current-menu-ancestor > a {
+        color: $header-dark-hover-color !important;
+    }
+}
+
+/* ==========================================================================
+   Header Vertical navigation style - end
+   ========================================================================== */

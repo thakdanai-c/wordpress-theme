@@ -1,0 +1,104 @@
+/* ==========================================================================
+   #Content bottom styles - begin
+   ========================================================================== */
+
+.edgtf-content-bottom {
+    .edgtf-content-bottom-inner {
+        box-sizing: border-box;
+
+        &.edgtf-grid {
+            padding: 20px 0;
+        }
+
+        &.edgtf-full-width {
+            padding: 20px 50px;
+        }
+    }
+}
+
+/* ==========================================================================
+   #Content bottom styles - end
+   ========================================================================== */
+
+/* ==========================================================================
+   Footer style - begin
+   ========================================================================== */
+
+.edgtf-page-footer {
+    @include edgtfRelativeHolderLayout();
+
+    z-index: 100;
+    box-sizing: border-box;
+
+    .edgtf-footer-top-holder {
+        @include edgtfRelativeHolderLayout();
+
+        background-color: #1c1c1c;
+        box-sizing: border-box;
+
+        .edgtf-footer-top-alignment-center {
+            text-align: center;
+        }
+
+        .edgtf-footer-top-alignment-left {
+            text-align: left;
+        }
+
+        .edgtf-footer-top-alignment-right {
+            text-align: right;
+        }
+
+        .edgtf-footer-top-inner {
+            box-sizing: border-box;
+
+            &.edgtf-grid {
+                padding: 108px 0 71px 0;
+            }
+
+            &.edgtf-full-width {
+                padding-top: 108px;
+                padding-right: 0;
+                padding-bottom: 71px;
+                padding-left: 0;
+
+                @media (min-width: $ipad-landscape-plus-pixel) {
+                    padding-left: 120px;
+                    padding-right: 120px;
+
+                    .edgtf-grid-row {
+                        margin-left: -30px;
+                        margin-right: -30px;
+                    }
+
+                    .edgtf-column-content {
+                        padding: 0 30px;
+                    }
+                }
+            }
+        }
+    }
+
+    .edgtf-footer-bottom-holder {
+        @include edgtfRelativeHolderLayout();
+
+        background-color: #363636;
+        box-sizing: border-box;
+        text-align: center;
+
+        .edgtf-footer-bottom-inner {
+            box-sizing: border-box;
+
+            &.edgtf-grid {
+                padding: 19px 0;
+            }
+
+            &.edgtf-full-width {
+                padding: 19px 50px;
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+   Footer style - end
+   ========================================================================== */

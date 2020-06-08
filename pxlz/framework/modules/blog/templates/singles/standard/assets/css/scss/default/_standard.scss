@@ -1,0 +1,212 @@
+/* ==========================================================================
+   Blog Single style - begin
+   ========================================================================== */
+
+.edgtf-blog-holder.edgtf-blog-single {
+
+    article {
+        margin: 0 0 39px;
+
+        &.format-quote,
+        &.format-link {
+            .edgtf-category-cover {
+                display: none; //not used in this list type
+            }
+        }
+
+        .edgtf-post-heading {
+            margin-bottom: 42px;
+        }
+
+        .edgtf-post-info-date {
+            margin: 10px $blog-gutter $blog-gutter $blog-gutter;
+
+            a {
+                @include edgtfItalicLink();
+            }
+        }
+
+        // post info begin
+        .edgtf-post-info-single {
+            border-bottom: 3px solid $default-border-color;
+            margin-top: 66px;
+            padding-bottom: 8px;
+
+            .edgtf-post-info-single-left,
+            .edgtf-post-info-single-right {
+                @include edgtfRelativeHolderLayout();
+            }
+
+            @media only screen and (min-width: $ipad-portrait-plus-pixel) {
+                .edgtf-post-info-single-left,
+                .edgtf-post-info-single-right {
+                    width: 50%;
+                }
+
+                .edgtf-post-info-single-left {
+                    float: left;
+
+                    > div {
+                        position: relative;
+                        display: inline-block;
+                        vertical-align: top;
+                        padding: 0 14px 0 0;
+                        color: $first-main-color;
+                        font-size: 13px;
+                        letter-spacing: .05em;
+
+                        &:after {
+                            content: '-';
+                            position: absolute;
+                            top: 0;
+                            right: 1px;
+                        }
+
+                        &:last-child {
+                            padding: 0;
+
+                            &:after {
+                                content: '';
+                            }
+                        }
+
+                        a {
+                            @include edgtfItalicLink();
+                        }
+                    }
+                }
+
+                .edgtf-post-info-single-right {
+                    text-align: right;
+                    float: right;
+                }
+            }
+
+            .edgtf-post-info-single-left {
+                > div {
+                    a {
+                        @include edgtfItalicLink();
+                    }
+                }
+            }
+        }
+        // post info end
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        // format video and audio
+        &.format-audio {
+            &.has-post-thumbnail {
+                .edgtf-blog-audio-holder {
+                    bottom: 0;
+                }
+            }
+        }
+
+        &.format-audio,
+        &.format-video {
+            .edgtf-post-info-category a {
+                @include edgtfItalicLink($first-main-color, $default-heading-color, none, !important);
+            }
+        }
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        // format link
+        &.format-link {
+            .edgtf-article-inner {
+                background-color: $first-main-color;
+                position: relative;
+            }
+
+            .edgtf-post-additional-content {
+                margin-top: 35px;
+            }
+
+            .edgtf-post-info-single-top {
+                > div {
+                    position: relative;
+                    display: inline-block;
+                    vertical-align: top;
+                    padding: 0 14px 0 0;
+                    color: $default-heading-color;
+                    font-size: 13px;
+                    letter-spacing: .05em;
+
+                    &:after {
+                        content: '-';
+                        position: absolute;
+                        top: 0;
+                        right: -2px;
+                    }
+
+                    &:last-child {
+                        padding: 0;
+
+                        &:after {
+                            content: '';
+                        }
+                    }
+
+                    a {
+                        @include edgtfItalicLink($default-heading-color, #fff, none, !important);
+                    }
+                }
+            }
+
+            .edgtf-post-info-date {
+                margin: 0;
+            }
+        }
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        // format quote
+        &.format-quote {
+            .edgtf-article-inner {
+                background-color: $first-main-color;
+                position: relative;
+            }
+
+            .edgtf-post-additional-content {
+                margin-top: 35px;
+            }
+
+            .edgtf-post-info-single-top {
+                > div {
+                    position: relative;
+                    display: inline-block;
+                    vertical-align: top;
+                    padding: 0 14px 0 0;
+                    color: #fff;
+                    font-size: 13px;
+                    letter-spacing: .05em;
+
+                    &:after {
+                        content: '-';
+                        position: absolute;
+                        top: 0;
+                        right: -2px;
+                    }
+
+                    &:last-child {
+                        padding: 0;
+
+                        &:after {
+                            content: '';
+                        }
+                    }
+
+                    a {
+                        @include edgtfItalicLink(#fff, $default-heading-color, none, !important);
+                    }
+                }
+            }
+
+            .edgtf-post-info-date {
+                margin: 0;
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+   Blog Single style - end
+   ========================================================================== */

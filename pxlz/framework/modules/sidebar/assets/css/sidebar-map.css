@@ -1,0 +1,35 @@
+/* ==========================================================================
+   Sidebar styles - begin
+   ========================================================================== */
+/* common mixins - start */
+/* common mixins - end */
+/* mixins styles - start */
+/* mixins styles - end */
+/* ==========================================================================
+# Sidebar style - begin
+========================================================================== */
+@media (min-width: 1025px) {
+  .edgtf-content-has-sidebar .edgtf-sidebar-holder:not([class*="pull"]) {
+    border-left: 3px solid #f5f5f5;
+    padding-left: 40px;
+  }
+  .edgtf-content-has-sidebar .edgtf-sidebar-holder[class*="pull"] {
+    border-right: 3px solid #f5f5f5;
+    padding-right: 40px;
+  }
+  .edgtf-content-has-sidebar .edgtf-page-content-holder:not([class*="push"]) {
+    padding-right: 40px;
+  }
+  .edgtf-content-has-sidebar .edgtf-page-content-holder[class*="push"] {
+    padding-left: 40px;
+  }
+}
+
+/* ==========================================================================
+# Sidebar style - end
+========================================================================== */
+/* ==========================================================================
+   Sidebar styles - end
+   ========================================================================== */
+
+/*# sourceMappingURL=../css/sidebar-map.css.map */

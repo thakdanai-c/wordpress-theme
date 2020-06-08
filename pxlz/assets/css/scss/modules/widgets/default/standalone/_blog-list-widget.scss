@@ -1,0 +1,16 @@
+/* ==========================================================================
+   Blog List widget style - begin
+   ========================================================================== */
+
+//class="edgtf-blog-list-holder edgtf-bl-simple edgtf-bl-one-column edgtf-normal-space edgtf-bl-pag-no-pagination"
+.edgtf-blog-list-widget {
+    .edgtf-blog-list-holder.edgtf-bl-minimal {
+        .edgtf-post-info-date a {
+            @include edgtfItalicLink($first-main-color, $default-heading-color, none, !important);
+        }
+    }
+}
+
+/* ==========================================================================
+   Blog List widget style - end
+   ========================================================================== */

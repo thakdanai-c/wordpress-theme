@@ -1,0 +1,161 @@
+/* ==========================================================================
+   Blog Slider shortcode style - begin
+   ========================================================================== */
+
+.edgtf-blog-slider-holder {
+    @include edgtfRelativeHolderLayout();
+
+    .edgtf-blog-list {
+        @include edgtfRelativeHolderLayout();
+
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .edgtf-bl-item {
+        @include edgtfRelativeHolderLayout();
+
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .edgtf-bli-inner {
+        @include edgtfRelativeHolderLayout();
+    }
+
+    .edgtf-bli-content {
+        @include edgtfRelativeHolderLayout();
+
+        box-sizing: border-box;
+    }
+
+    .edgtf-post-image {
+        @include edgtfRelativeHolderLayout();
+
+        a {
+            display: block;
+
+            @include edgtfImageOverlayHoverStyle();
+        }
+
+        img {
+            display: block;
+        }
+    }
+
+    .edgtf-bli-heading {
+        margin-bottom: 44px;
+        position: relative;
+
+        .edgtf-post-info-category {
+            bottom: 0;
+            line-height: 1em;
+            margin-left: $blog-gutter;
+            position: absolute;
+            visibility: hidden;
+
+            @include edgtfTransform(translateY(50%));
+
+            a {
+                background-color: $first-main-color;
+                color: #fff;
+                display: inline-block;
+                font-family: $default-heading-font;
+                letter-spacing: 0.16em;
+                line-height: inherit;
+                margin: 0 15px 1px 0;
+                padding: 13px 28px;
+                text-transform: uppercase;
+                visibility: visible;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+    .edgtf-bli-excerpt {
+        margin: 0 $blog-gutter;
+    }
+
+    .edgtf-bli-info {
+        @include edgtfRelativeHolderLayout();
+
+        margin: 19px $blog-gutter 0 $blog-gutter;
+        clear: both;
+
+        > div {
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+            padding: 0 14px 0 0;
+            color: $default-text-color;
+            font-size: 13px;
+            letter-spacing: .05em;
+            margin: 0 !important;
+
+            &:after {
+                content: '-';
+                position: absolute;
+                top: 0;
+                right: -2px;
+            }
+
+            &:last-child {
+                padding: 0;
+
+                &:after {
+                    content: '';
+                }
+            }
+
+            a {
+                @include edgtfItalicLink($first-main-color, $default-heading-color, none, !important);
+            }
+        }
+    }
+
+    .edgtf-post-title {
+        margin: 0 $blog-gutter;
+    }
+
+    .edgtf-post-excerpt {
+        @include edgtfRelativeHolderLayout();
+
+        margin: 16px 0 0;
+
+        p {
+            margin: 0;
+        }
+
+        &:after {
+            content: '...';
+        }
+    }
+
+    &:not(.edgtf-bs-standard-image) {
+        .edgtf-post-title {
+            margin: 0;
+        }
+
+        .edgtf-bli-excerpt {
+            margin: 0;
+        }
+
+        .edgtf-bli-info {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+}
+
+/* ==========================================================================
+   Blog Slider shortcode style - end
+   ========================================================================== */

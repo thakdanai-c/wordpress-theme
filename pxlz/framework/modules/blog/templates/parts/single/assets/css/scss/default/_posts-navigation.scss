@@ -1,0 +1,109 @@
+/* Single posts navigation styles - begin
+    ====================================================================== */
+
+.edgtf-blog-single-navigation {
+    position: relative;
+    display: table;
+    width: 100%;
+    vertical-align: middle;
+    padding: 0;
+    clear: both;
+    box-sizing: border-box;
+
+    .edgtf-blog-single-navigation-inner {
+        padding: 135px 0 74px;
+    }
+
+    .edgtf-blog-single-prev,
+    .edgtf-blog-single-next {
+        position: relative;
+
+        .edgtf-blog-single-nav-label {
+            @include edgtfItalicLink($default-heading-color, $first-main-color, underline);
+        }
+
+        .edgtf-blog-single-nav-background-label {
+            color: #f7f7f7;
+            font-family: $default-heading-font;
+            font-size: 80px;
+            font-weight: 500;
+            position: absolute;
+            text-transform: uppercase;
+            top: 0;
+            z-index: -1;
+            @include edgtfTransition(all 0.3s ease-out);
+        }
+    }
+
+    .edgtf-blog-single-prev {
+        float: left;
+
+        .edgtf-blog-single-nav-label {
+            float: left;
+        }
+
+        .edgtf-blog-single-nav-background-label {
+            left: 23px;
+
+            @include ipad-portrait() {
+                display: none;
+            }
+        }
+
+
+        &:hover {
+            .edgtf-blog-single-nav-background-label {
+                @include edgtfTransform(translate3d(-10px,0,0));
+            }
+        }
+    }
+
+    .edgtf-blog-single-next {
+        float: right;
+
+        .edgtf-blog-single-nav-label {
+            float: right;
+        }
+
+        .edgtf-blog-single-nav-background-label {
+            right: 23px;
+
+            @include ipad-portrait() {
+                display: none;
+            }
+        }
+
+        &:hover {
+            .edgtf-blog-single-nav-background-label {
+                @include edgtfTransform(translate3d(10px,0,0));
+            }
+        }
+    }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// paginated links on single and link - <!--nextpage--> tag
+
+.edgtf-blog-holder:not(.edgtf-blog-single) {
+    .edgtf-single-links-pages {
+        margin-left: $blog-gutter;
+    }
+}
+
+.edgtf-single-links-pages {
+    clear: both;
+    margin: 20px 0 5px;
+
+    .edgtf-single-links-pages-inner {
+        > a,
+        > span {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 15px 5px 0;
+        }
+    }
+}
+
+/* Single posts navigation styles - end
+    ====================================================================== */

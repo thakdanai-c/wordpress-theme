@@ -1,0 +1,664 @@
+@import 'variables';
+@import 'mixins';
+
+/* ==========================================================================
+   #Comments styles - start
+   ========================================================================== */
+
+.edgtf-comment-holder {
+    //@include edgtfRelativeHolderLayout();
+
+    .edgtf-comment-holder-inner {
+        border-top: 3px solid $default-border-color;
+        padding-top: 78px;
+        box-sizing: border-box;
+        margin-bottom: 39px;
+    }
+
+    .edgtf-comment {
+
+        &.edgtf-pingback-comment {
+
+            .edgtf-comment-text {
+                padding: 0;
+            }
+        }
+    }
+
+    .edgtf-comment-list {
+        list-style: none;
+        position: relative;
+        z-index: 150;
+        padding: 0;
+        margin: 0;
+
+        li {
+            @include edgtfRelativeHolderLayout();
+
+            border-top: 1px solid $default-border-color;
+            margin: 44px 0 0;
+            padding: 51px 0 0;
+        }
+
+        > li:first-child {
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+
+        .children {
+            padding: 0 0 0 34px;
+        }
+    }
+
+    .edgtf-comments-title {
+        margin-bottom: 47px;
+
+        > * {
+            margin: 0;
+        }
+    }
+
+    .edgtf-comment-image {
+        position: relative;
+        display: block;
+        top: 6px;
+        left: 0;
+        width: 67px;
+        height: 67px;
+        float: left;
+
+        img {
+            display: block;
+            border-radius: 4em;
+        }
+    }
+
+    .edgtf-comment-text {
+        padding: 0 0 0 108px;
+        min-height: 67px;
+        position: relative;
+
+        .edgtf-comment-info {
+            @include edgtfRelativeHolderLayout();
+
+            margin: 0 0 13px;
+        }
+
+        .edgtf-reply-link-holder {
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            .replay,
+            .comment-reply-link,
+            .comment-edit-link {
+                margin-left: 10px;
+
+                @include edgtfItalicLink($default-heading-color, $first-main-color, underline);
+            }
+        }
+
+        .edgtf-comment-name {
+            margin: 0;
+            padding-right: 85px;
+        }
+
+        .edgtf-comment-date {
+            color: $first-main-color;
+            font-size: 12px;
+            font-style: italic;
+            margin: 0;
+        }
+
+        .edgtf-text-holder p {
+            margin: 7px 0;
+        }
+
+        .comment-respond {
+            margin: 20px 0;
+
+            .comment-reply-title {
+                margin: 0 0 10px;
+                font-size: 14px;
+            }
+
+            .logged-in-as {
+                margin: 0 0 8px;
+            }
+        }
+
+        #cancel-comment-reply-link {
+            margin-left: 10px;
+            font-size: 12px;
+            color: $first-main-color;
+
+            &:hover {
+                color: $default-heading-color;
+            }
+        }
+
+        ul, ol {
+
+            li {
+                display: list-item;
+            }
+        }
+
+        li {
+            margin: 0 !important;
+            padding: 0 !important;
+            border: 0 !important;
+        }
+    }
+}
+
+.edgtf-comment-form {
+    border-top: 3px solid $default-border-color;
+    padding: 0;
+    clear: both;
+    box-sizing: border-box;
+
+    .edgtf-comment-form-inner {
+        padding: 78px 0 80px;
+    }
+
+    .comment-reply-title {
+        margin: 0 0 19px;
+    }
+
+    .logged-in-as {
+        margin: 0 0 8px;
+    }
+
+    #url {
+        display: none;
+    }
+
+    #author {
+        float: left;
+        width: calc(50% - 10px) !important;
+    }
+
+    #email {
+        float: right;
+        width: calc(50% - 10px) !important;
+    }
+
+}
+
+@include ipad-portrait {
+
+    .edgtf-comment-holder {
+
+        .edgtf-comment-list {
+
+            .children {
+                padding: 0 0 0 40px;
+            }
+        }
+    }
+}
+
+@include phone-landscape {
+
+    .edgtf-comment-holder {
+
+        .edgtf-comment-list {
+
+            .children {
+                padding: 0;
+            }
+        }
+
+        .edgtf-comment-text {
+
+            .edgtf-comment-date,
+            .edgtf-comment-name {
+                float: none;
+            }
+
+            .replay,
+            .comment-reply-link,
+            .comment-edit-link {
+                float: none;
+                margin: 0 10px 0 0;
+            }
+        }
+    }
+}
+
+@include phone-portrait {
+
+    .edgtf-comment-holder {
+
+        .edgtf-comment-image {
+            float: none;
+        }
+
+        .edgtf-comment-text {
+            padding: 20px 0 0;
+            min-height: inherit;
+        }
+    }
+}
+
+/* ==========================================================================
+   #Comments styles - end
+   ========================================================================== */
+
+#respond textarea,
+.edgtf-style-form textarea,
+#respond input[type='text'],
+input[type='text'],
+input[type='email'],
+input[type='password'],
+.post-password-form input[type='password'] {
+    @extend %input-style;
+}
+
+#respond textarea {
+    height: 160px;
+}
+
+.post-password-form input[type='password'] {
+    margin-top: 10px;
+}
+
+.wpcf7-form-control {
+    &.wpcf7-text,
+    &.wpcf7-number,
+    &.wpcf7-date,
+    &.wpcf7-textarea,
+    &.wpcf7-select,
+    &.wpcf7-quiz {
+        @extend %input-style;
+
+        footer & {
+            margin: 0;
+        }
+    }
+}
+
+#submit_comment,
+.post-password-form input[type='submit'],
+input.wpcf7-form-control.wpcf7-submit {
+    @include edgtfButtonDefaultStyle();
+    @include edgtfButtonSmallParams();
+    @include edgtfButtonSolidColor();
+
+    cursor: pointer;
+
+    &:hover {
+        @include edgtfButtonSolidHoverColor();
+    }
+}
+
+p.form-submit,
+.wpcf7-form p {
+    margin: 0;
+}
+
+#respond textarea,
+.edgtf-style-form textarea,
+.wpcf7-form textarea {
+    display: block;
+    padding: 16px 18px;
+}
+
+.wpcf7-form {
+    .ajax-loader {
+        display: none !important;
+    }
+
+    .edgtf-single-line-form {
+        padding-bottom: 5px;
+
+        .edgtf-left {
+            float: left;
+            width: 70%;
+        }
+
+        .edgtf-right {
+            float: right;
+            text-align: right;
+            width: 30%;
+        }
+    }
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+}
+
+/* ==========================================================================
+   #Comments styles - end
+   ========================================================================== */
+
+/* ==========================================================================
+   #Global Owl Slider - begin
+   ========================================================================== */
+.edgtf-owl-slider {
+    visibility: hidden;
+
+    .owl-stage-outer {
+        z-index: 1;
+    }
+
+    &.edgtf-slider-is-moving {
+        .owl-item {
+            .edgtf-block-drag-link {
+                z-index: -1 !important;
+            }
+        }
+    }
+
+    &.edgtf-slider-has-both-nav {
+        .owl-nav {
+            .owl-prev,
+            .owl-next {
+                $pos: calc(-50% - 21px); // 21 is is half height of pagination control + top margin
+                @include edgtfTransform(translateY($pos));
+            }
+        }
+    }
+
+    .owl-nav {
+        .owl-prev,
+        .owl-next {
+            position: absolute;
+            top: 50%;
+            z-index: 3;
+            color: $default-heading-color;
+
+            @include edgtfTransform(translateY(-50%));
+            @include edgtfTransition(color .2s ease-out);
+
+            &:hover {
+                color: $first-main-color;
+            }
+
+            > span {
+                position: relative;
+                display: inline-block;
+                vertical-align: middle;
+                font-size: 22px;
+                line-height: 1;
+
+                &:before {
+                    display: block;
+                    line-height: inherit;
+                }
+            }
+        }
+
+        .owl-prev {
+            left: 24px;
+        }
+
+        .owl-next {
+            right: 24px;
+        }
+    }
+
+    .owl-dots {
+        text-align: center;
+        margin: 16px 0 0;
+
+        .owl-dot {
+            display: inline-block;
+            vertical-align: middle;
+
+            span {
+                display: inline-block;
+                vertical-align: middle;
+                width: 7px;
+                height: 7px;
+                margin: 0 12px;
+                background-color: $default-text-color;
+                box-sizing: border-box;
+
+                @include edgtfTransition(background-color .2s ease-out);
+            }
+
+            &:hover,
+            &.active {
+                span {
+                    background-color: $first-main-color;
+                }
+            }
+        }
+    }
+
+    .owl-carousel .owl-item img {
+        -webkit-transform: translateZ(0); //chrome text cut off fix
+    }
+}
+
+/* ==========================================================================
+   #Global Owl Slider - end
+   ========================================================================== */
+
+/* ==========================================================================
+   #404 styles - start
+   ========================================================================== */
+
+.edgtf-404-page {
+
+    &.edgtf-wrapper {
+        padding: 0 !important;
+    }
+
+    .edgtf-content {
+        height: 100vh;
+
+        .admin-bar & {
+            height: calc(100vh - 32px);
+        }
+    }
+
+    .edgtf-content-inner {
+        position: relative;
+        display: table;
+        height: 100%;
+        width: 100%;
+    }
+
+    .edgtf-page-not-found {
+        position: relative;
+        display: table-cell;
+        width: 100%;
+        height: 100%;
+        vertical-align: middle;
+        padding: 0 20%;
+        text-align: center;
+
+        .edgtf-404-title {
+            color: $first-main-color;
+            font-size: 154px;
+            line-height: 1em;
+            margin: 0;
+        }
+
+        .edgtf-404-subtitle {
+            margin: 23px 0 0;
+            line-height: 1em;
+        }
+
+        .edgtf-404-text {
+            font-size: 15px;
+            line-height: 2.3em;
+            margin: 30px auto 0;
+            width: 56%;
+
+            @include laptop-landscape() {
+                width: 70%;
+            }
+        }
+
+        .edgtf-btn {
+            margin: 44px 0 0;
+        }
+    }
+
+    @include ipad-portrait {
+        .edgtf-page-not-found {
+            padding: 40px 30px;
+        }
+    }
+
+    @include phone-landscape {
+        .edgtf-content {
+            height: auto;
+            margin: 0 !important;
+
+            .admin-bar & {
+                height: auto;
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+   #404 styles - end
+   ========================================================================== */
+
+/* ==========================================================================
+   #Back to Top styles - start
+   ========================================================================== */
+#edgtf-back-to-top {
+    bottom: 25px;
+    margin: 0;
+    opacity: 0;
+    position: fixed;
+    right: 25px;
+    overflow:hidden;
+    visibility: hidden;
+    width: 39px;
+    z-index: 10000;
+
+    &.off {
+        opacity: 0;
+        visibility: hidden;
+
+        @include edgtfTransition(opacity 0.15s ease, visibility .0s .15s);
+    }
+
+    &.on {
+        opacity: 1;
+        visibility: visible;
+
+        @include edgtfTransition(opacity 0.3s ease);
+    }
+
+    > span {
+        background-color: $first-main-color;
+        color: #fff;
+        display: block;
+        font-size: 22px;
+        height: 39px;
+        line-height: 39px;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+        width: 39px;
+
+        @include edgtfTransition(all 0.5s cubic-bezier(0.77, 0, 0.175, 1));
+    }
+
+    .edgtf-icon-stack-hover {
+        background-color: $default-heading-color;
+        @include edgtfAbsoluteHolderLayout();
+        @include edgtfTransform(translateY(100%));
+
+        span {
+            opacity:0;
+        }
+    }
+
+    span span {
+        display: block;
+        line-height: inherit;
+        @include edgtfTransition(all 0.5s cubic-bezier(0.77, 0, 0.175, 1));
+    }
+
+    &:hover {
+        .edgtf-icon-stack {
+            @include edgtfTransform(translateY(-50%));
+
+            span {
+                opacity:0;
+            }
+        }
+
+        .edgtf-icon-stack-hover {
+            @include edgtfTransform(translateY(0%));
+
+            span {
+                opacity:1;
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+   #Back to Top styles - end
+   ========================================================================== */
+
+/* ==========================================================================
+   #Self Hosted Video styles - begin
+   ========================================================================== */
+.edgtf-self-hosted-video-holder {
+
+    .edgtf-video-wrap {
+
+        .mejs-poster,
+        .mejs-container,
+        .mejs-overlay-play {
+            height: 100% !important; /*!important because of the inline style*/
+            width: 100% !important; /*!important because of the inline style*/
+        }
+    }
+}
+
+/* ==========================================================================
+   #Self Hosted Video styles - end
+   ========================================================================== */
+
+/* ==========================================================================
+    #Animate Text styles - strat
+    ========================================================================== */
+.edgtf-animate-text-holder {
+    .no-touch & {
+        display: inline-block;
+        overflow: hidden;
+        vertical-align: top;
+
+        .edgtf-animate-text {
+            display: inline-block;
+            @include edgtfTransform(translate3d(110%, 0, 0));
+            will-change: transform;
+
+            @at-root .edgtf-animate-text {
+                visibility: hidden;
+
+                .touch & {
+                    visibility: visible;
+                }
+            }
+
+            &.edgtf-appeared {
+                visibility: visible;
+                @include edgtfTransform(translate3d(0, 0, 0));
+                @include edgtfTransitionTransform(.8s cubic-bezier(.77, 0, .175, 1));
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+    #Animate Text styles - end
+    ========================================================================== */

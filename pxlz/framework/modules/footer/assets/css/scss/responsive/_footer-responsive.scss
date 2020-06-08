@@ -1,0 +1,87 @@
+/* ==========================================================================
+   Footer responsive style - begin
+   ========================================================================== */
+
+@include ipad-landscape {
+    .edgtf-page-footer {
+        .edgtf-footer-top-holder {
+            .edgtf-full-width {
+                margin: 0 auto;
+                width: 768px;
+            }
+        }
+
+        .edgtf-column-content {
+            @media only screen and (min-width: $phone-landscape-plus-pixel) {
+                &.edgtf-grid-col-3 {
+                    width: 50%;
+                    float: left;
+
+                    &:nth-child(2n+1) {
+                        clear: both;
+                    }
+
+                    &:nth-child(3),
+                    &:nth-child(4) {
+                        margin-top: 30px;
+                    }
+                }
+
+                &.edgtf-grid-col-4 {
+                    width: 33.33333333333333%;
+                    float: left;
+                }
+            }
+        }
+    }
+}
+
+@include ipad-portrait {
+    .edgtf-page-footer {
+        .edgtf-footer-top-holder {
+            .edgtf-full-width {
+                width: 600px;
+            }
+        }
+    }
+}
+
+@include phone-landscape {
+    .edgtf-page-footer {
+        .edgtf-footer-top-holder {
+            .edgtf-full-width {
+                width: 420px;
+            }
+        }
+
+        .edgtf-column-content {
+            &:not(:first-child) {
+                margin-top: 30px;
+            }
+        }
+    }
+}
+
+@include phone-portrait {
+    .edgtf-page-footer {
+        .edgtf-footer-top-holder {
+            .edgtf-full-width {
+                width: 300px;
+            }
+        }
+    }
+}
+
+@include smaller-phone-portrait {
+    .edgtf-page-footer {
+        .edgtf-footer-top-holder {
+            .edgtf-full-width {
+                width: 90%;
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+   Footer responsive style - end
+   ========================================================================== */

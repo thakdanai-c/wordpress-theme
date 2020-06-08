@@ -1,0 +1,108 @@
+// widgets spacing
+$widget-bottom-margin: 32px;
+
+// list items dimensions
+$widget-list-item-height: 20px;
+$widget-list-item-padding: 8px;
+
+// list items color
+$widget-list-item-background-color: transparent;
+
+// list items border
+$widget-list-item-border-color: transparent;
+$widget-list-item-border-width: 0;
+$widget-list-item-border-style: none;
+
+// text
+$widget-text-color: #fff;
+$widget-heading-color: #fff;
+
+// links
+$widget-link-color: #fff;
+$widget-link-hover-color: #fff;
+
+// specific widgets
+$widget-search-form-height: 48px;
+$widget-tag-cloud-height: 32px;
+
+footer {
+    @import 'widgets/default-wordpress-widgets';
+
+    .widget {
+        &.widget_text {
+            color: #fff;
+        }
+
+        a {
+            text-decoration: none !important;
+
+            &:hover {
+                text-decoration: underline !important;
+            }
+        }
+
+        ul li a {
+            font-size: 14px !important;
+        }
+
+        &.widget_edgtf_twitter_widget {
+            .edgtf-twitter-widget li .edgtf-tweet-text a {
+                &:not(.edgtf-tweet-time),
+                .edgtf-tweet-time {
+                    &:hover {
+                        color: $widget-link-hover-color !important;
+                        text-decoration: none !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .edgtf-single-line-form {
+        &::before,
+        &::after {
+            content: ' ';
+            display: table;
+        }
+
+        &::after {
+            clear: both;
+        }
+
+        input[type="text"] {
+            background: transparent;
+            border: 0;
+            color: $default-text-color !important;
+            font-size: 14px;
+            line-height: 28px;
+            padding: 0 !important;
+
+            @include edgtfPlaceholder {
+                color: $default-text-color !important;
+            }
+
+            :focus {
+                color: $default-text-color !important;
+            }
+        }
+
+        input[type="submit"] {
+            @include edgtfItalicLink(#fff, $first-main-color, none, !important);
+
+            background: transparent;
+            border: 0;
+            font-family: $default-text-font;
+            font-size: 14px !important;
+            letter-spacing: 0;
+            line-height: 28px;
+            padding: 0 !important;
+            text-transform: none;
+
+            &:hover {
+                background: transparent;
+            }
+        }
+
+        border-bottom: 2px solid $first-main-color;
+    }
+}

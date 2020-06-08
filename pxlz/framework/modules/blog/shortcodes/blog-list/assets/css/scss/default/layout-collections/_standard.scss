@@ -1,0 +1,76 @@
+/* ==========================================================================
+   Blog List shortcode - Standard type style - begin
+   ========================================================================== */
+
+.edgtf-blog-list-holder {
+    &.edgtf-bl-standard {
+        &:not(.edgtf-bl-one-column) {
+            .edgtf-bl-item {
+                float: left;
+            }
+        }
+
+        &:not(.edgtf-bl-standard-image) {
+            .edgtf-post-title {
+                margin: 0;
+            }
+
+            .edgtf-bli-excerpt {
+                margin: 0;
+
+                .edgtf-post-excerpt {
+                    margin-top: 24px;
+                }
+            }
+
+            .edgtf-bli-info {
+                margin: 22px 0 0 0;
+            }
+
+            .edgtf-post-read-more-button {
+                margin-left: 0;
+            }
+        }
+
+        .edgtf-category-cover {
+            display: none; //remove for this list type
+        }
+
+        $columns_number: ('two', 'three', 'four', 'five');
+
+        @for $i from 0 to length($columns_number) {
+            &.edgtf-bl-#{nth($columns_number,$i+1)}-columns {
+
+                .edgtf-bl-item {
+                    width: 100% / ($i+2);
+                }
+
+                @if ($i > 1) { // set different break point for four and five columns
+                    @media only screen and (min-width: $laptop-landscape-medium-plus-pixel) {
+
+                        .edgtf-bl-item {
+
+                            &:nth-child(#{$i+2}n+1) {
+                                clear: both;
+                            }
+                        }
+                    }
+                } @else {
+                    @media only screen and (min-width: $ipad-landscape-plus-pixel) {
+
+                        .edgtf-bl-item {
+
+                            &:nth-child(#{$i+2}n+1) {
+                                clear: both;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+   Blog List shortcode - Standard type style - end
+   ========================================================================== */

@@ -1,0 +1,131 @@
+/* ==========================================================================
+   Marks (Sale, Out of Stock) mixin styles - begin
+   ========================================================================== */
+
+@mixin edgtfWooCommerceMarksGeneralStyle() {
+    position: absolute;
+    display: block;
+    top: 0;
+    width: auto;
+    height: 38px;
+    margin: 0;
+    padding: 0 17px;
+    color: #0d0d0d;
+    line-height: 38px;
+    text-align: center;
+    z-index: 100;
+    box-sizing: border-box;
+    font-family: $default-heading-font;
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    background-color: transparent;
+
+    @include edgtfTransform(translateZ(0));
+}
+
+@mixin edgtfWooCommerceSaleStyle() {
+    right: 0;
+}
+
+@mixin edgtfWooCommerceOutOfStockyStyle() {
+    right: 0;
+}
+
+/* ==========================================================================
+   Marks (Sale, Out of Stock) mixin styles - end
+   ========================================================================== */
+
+/* ==========================================================================
+   Price mixin styles - begin
+   ========================================================================== */
+
+@mixin edgtfWooCommercePriceStyle() {
+    position: relative;
+    display: block;
+    margin: 5px 0 0;
+    line-height: 1;
+    color: $first-main-color;
+    font-size: 17px;
+    font-style: italic;
+
+    * {
+        font-size: inherit;
+        line-height: inherit;
+    }
+
+    del {
+        margin: 0 8px 0 0;
+        color: rgba($default-heading-color, .8);
+    }
+
+    ins {
+        text-decoration: none;
+    }
+}
+
+/* ==========================================================================
+   Price mixin styles - end
+   ========================================================================== */
+
+/* ==========================================================================
+   Star Ratings mixin styles - begin
+   ========================================================================== */
+
+%star-ratings {
+    font-family: "ElegantIcons";
+    font-size: 11px;
+    line-height: 1;
+    letter-spacing: 5.5px;
+    color: #ffe625;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin edgtfWooCommerceRatingsStyle() {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    @extend %star-ratings;
+    overflow: hidden;
+
+    &:before {
+        content: "\e031\e031\e031\e031\e031";
+    }
+
+    span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+
+        &:before {
+            content: "\e033\e033\e033\e033\e033";
+        }
+    }
+}
+
+@mixin edgtfWooCommerceSingleProductRatingsStyle() {
+
+    &:before {
+        content: "\e031";
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        @extend %star-ratings;
+        overflow: hidden;
+        z-index: -1;
+    }
+
+    &.active:after {
+        content: "\e033\e033\e033\e033\e033";
+        position: absolute;
+        right: 0;
+        bottom: 7px;
+        display: block;
+        @extend %star-ratings;
+    }
+}
+
+/* ==========================================================================
+   Star Ratings mixin styles - end
+   ========================================================================== */

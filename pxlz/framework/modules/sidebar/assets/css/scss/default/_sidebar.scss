@@ -1,0 +1,41 @@
+/* ==========================================================================
+# Sidebar style - begin
+========================================================================== */
+
+@media (min-width: 1025px) {
+    .edgtf-content-has-sidebar {
+        $sidebar-gutter: 40px;
+
+        // sidebar holder gutter and border
+        .edgtf-sidebar-holder {
+            // sidebar on right
+            &:not([class*="pull"]) {
+                border-left: 3px solid $default-border-color;
+                padding-left: $sidebar-gutter;
+            }
+
+            // sidebar on left
+            &[class*="pull"] {
+                border-right: 3px solid $default-border-color;
+                padding-right: $sidebar-gutter;
+            }
+        }
+
+        // content holder gutter
+        .edgtf-page-content-holder {
+            // sidebar on right
+            &:not([class*="push"]) {
+                padding-right: $sidebar-gutter;
+            }
+
+            // sidebar on left
+            &[class*="push"] {
+                padding-left: $sidebar-gutter;
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+# Sidebar style - end
+========================================================================== */

@@ -1,0 +1,471 @@
+/* ==========================================================================
+   Blog Common style - begin
+   ========================================================================== */
+
+.edgtf-blog-holder {
+    @include edgtfRelativeHolderLayout();
+
+    margin: 0;
+    clear: both;
+
+    &.edgtf-blog-standard {
+        article {
+            &.format-quote,
+            &.format-link {
+                .edgtf-category-cover {
+                    display: none; //not used in this list type
+                }
+            }
+        }
+    }
+
+    article {
+        @include edgtfRelativeHolderLayout();
+        box-sizing: border-box;
+
+        &.sticky {
+
+            .edgtf-post-title a {
+                color: $first-main-color;
+
+                &:after {
+                    content: '\e033';
+                    font-family: ElegantIcons;
+                    font-size: 50%;
+                    position: relative;
+                    top: -17px;
+                }
+
+                &:hover {
+                    color: $default-heading-color;
+                }
+            }
+        }
+
+        .edgtf-post-content {
+            @include edgtfRelativeHolderLayout();
+        }
+
+        .edgtf-post-image {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            max-width: 100%;
+
+            img {
+                display: block;
+            }
+        }
+
+        .edgtf-post-image-background {
+            @include edgtfAbsoluteHolderLayout();
+
+            height: 100%;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .edgtf-post-image-icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 30px;
+            line-height: 1;
+            color: #fff;
+        }
+
+        .edgtf-post-heading {
+            .edgtf-post-info-category {
+                line-height: 1em;
+                margin-left: $blog-gutter;
+                visibility: hidden;
+
+                a {
+                    background-color: $first-main-color;
+                    color: #fff;
+                    display: inline-block;
+                    position: relative;
+                    font-family: $default-heading-font;
+                    letter-spacing: 0.16em;
+                    line-height: inherit;
+                    margin: 0 15px 1px 0;
+                    padding: 13px 28px;
+                    box-sizing: border-box;
+                    text-transform: uppercase;
+                    visibility: visible;
+                    text-align: center;
+
+                    .edgtf-category-text {
+                        display: inline-block;
+                        position: relative;
+
+                        &:not(.edgtf-category-cover-text) {
+                            -webkit-transition: -webkit-transform .2s cubic-bezier(0.23, 0.71, 0.55, 0.99), opacity .15s;
+                            transition: transform .2s cubic-bezier(0.23, 0.71, 0.55, 0.99), opacity .15s;
+                        }
+                    }
+
+                    .edgtf-category-cover {
+                        position: absolute;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        top: 0;
+                        left: 0;
+                        height: 100%;
+                        width: 100%;
+                        pointer-events: none;
+
+                        .edgtf-category-cover-text {
+                            opacity: 0;
+                            color: #fff;
+                            @include edgtfTransform(translate3d(-20px, 0, 0));
+                            @include edgtfTransition(all .0s .2s);
+                            z-index: 20;
+                        }
+
+                        .edgtf-category-cover-bgrnd {
+                            @include edgtfAbsoluteHolderLayout();
+                            background-color: $default-heading-color;
+                            @include edgtfTransformOrigin(100% 50%);
+                            @include edgtfTransform(scaleX(0));
+                            @include edgtfTransitionTransform(.35s cubic-bezier(0.86, 0, 0.07, 1));
+                            will-change: transform;
+                        }
+                    }
+
+                    &:hover {
+                        .edgtf-category-cover-bgrnd {
+                            @include edgtfTransformOrigin(0% 50%);
+                            @include edgtfTransform(scaleX(1));
+                            @include edgtfTransitionTransform(.5s cubic-bezier(0.86, 0, 0.07, 1));
+                        }
+
+                        .edgtf-category-text:not(.edgtf-category-cover-text) {
+                            opacity: 0;
+                            @include edgtfTransform(translate3d(15px, 0, 0));
+                        }
+
+                        .edgtf-category-cover-text {
+                            opacity: 1;
+                            @include edgtfTransform(translate3d(0, 0, 0));
+                            -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.28, 1.04, 0.49, 0.9) 0.2s, opacity .6s .15s;
+                            transition: transform 0.4s cubic-bezier(0.28, 1.04, 0.49, 0.9) 0.2s, opacity .6s .15s;
+                        }
+                    }
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+
+        // absolute positioned categories when featured image exists
+        &.edgtf-post-has-media:not(.format-audio):not(.format-video), // list
+        &.has-post-thumbnail:not(.format-audio):not(.format-video) { // single
+            .edgtf-post-heading {
+                position: relative;
+
+                .edgtf-post-info-category {
+                    bottom: -20px;
+                    left: 0;
+                    position: absolute;
+                    z-index: 10;
+
+                    a {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+
+        .edgtf-post-text {
+            @include edgtfRelativeHolderLayout();
+
+            box-sizing: border-box;
+        }
+
+        .edgtf-post-title {
+            margin: 0 $blog-gutter;
+        }
+
+        .edgtf-post-excerpt {
+            &:after {
+                content: '...';
+            }
+        }
+
+        .edgtf-more-link-container {
+            @include edgtfRelativeHolderLayout();
+
+            margin: 27px 0 0;
+        }
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //Link post style
+        &.format-link {
+            .edgtf-post-title {
+                margin: 0 0 13px 0;
+
+                a {
+                    &:hover {
+                        color: #fff;
+                    }
+                }
+            }
+
+            .edgtf-post-text {
+                overflow: hidden;
+                padding: 66px 103px 66px 75px;
+            }
+
+            .edgtf-post-text-main {
+            }
+
+            .edgtf-post-mark {
+                position: absolute;
+                right: -25px;
+                top: -26px;
+
+                .edgtf-link-mark {
+                    font-size: 127px;
+                    color: $default-heading-color;
+                }
+            }
+        }
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //Quote post style
+        &.format-quote {
+            .edgtf-post-title {
+                color: #fff;
+                margin: 0 0 13px 0;
+
+                a {
+                    &:hover {
+                        color: $default-heading-color;
+                    }
+                }
+            }
+
+            .edgtf-post-text {
+                overflow: hidden;
+                padding: 66px 115px 66px 75px;
+            }
+
+            .edgtf-post-text-main {
+            }
+
+            .edgtf-post-mark {
+                position: absolute;
+                right: -21px;
+                top: -41px;
+
+                .edgtf-quote-mark {
+                    font-size: 136px;
+                    color: #fff;
+                }
+            }
+
+            .edgtf-quote-author {
+                color: #fff;
+                margin: 0 0 13px 0;
+            }
+        }
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //Gallery post style
+        &.format-gallery {
+            .edgtf-post-image {
+                width: 100%;
+            }
+
+            .owl-carousel .owl-item {
+                z-index: 2;
+
+                &.active {
+                    z-index: 3;
+                }
+            }
+        }
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //Audio post style
+        &.format-audio {
+            &.has-post-thumbnail {
+                .edgtf-post-heading {
+                    position: relative;
+                }
+
+                .edgtf-blog-audio-holder {
+                    position: absolute;
+                    bottom: 56px;
+                    left: 0;
+                    width: 100%;
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+            }
+
+            .edgtf-post-image {
+                width: 100%;
+                max-width: inherit;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .edgtf-post-info-list > div a {
+                @include edgtfItalicLink($first-main-color, $default-heading-color, none, !important);
+            }
+
+            .edgtf-blog-audio-holder {
+                .mejs-container, .mejs-embed, .mejs-embed body, .mejs-container .mejs-controls {
+                    background: none;
+                }
+
+                .mejs-container {
+                    background-color: $default-heading-color;
+                }
+
+                .mejs-container,
+                .mejs-container .mejs-controls {
+                    height: 38px !important;
+                }
+
+                .mejs-container .mejs-controls {
+                    padding: 0 10px 0 4px;
+                    box-sizing: border-box;
+                }
+
+                .mejs-container .mejs-controls > .mejs-playpause-button {
+                    width: 39px;
+                }
+
+                .mejs-container .mejs-controls > .mejs-volume-button {
+                    width: 30px;
+                }
+
+                .mejs-container .mejs-controls > .mejs-playpause-button,
+                .mejs-container .mejs-controls > .mejs-volume-button {
+                    height: 38px;
+
+                    button {
+                        position: relative;
+                        height: 100%;
+                        background: none;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        margin: 0;
+                        border: 0;
+                        outline: none;
+                    }
+
+                    &.mejs-play button {
+                        width: 39px;
+                        background-image: url('../img/audio/play.png');
+                    }
+
+                    &.mejs-pause button {
+                        width: 39px;
+                        background-image: url('../img/audio/pause.png');
+                    }
+
+                    &.mejs-stop button {
+                        width: 39px;
+                        background-image: url('../img/audio/stop.png');
+                    }
+
+                    &.mejs-mute button {
+                        width: 30px;
+                        background-image: url('../img/audio/sound.png');
+                    }
+
+                    &.mejs-unmute button {
+                        width: 30px;
+                        background-image: url('../img/audio/mute.png');
+                    }
+                }
+
+                .mejs-container .mejs-controls > .mejs-time {
+                    height: 100%;
+                    padding: 0;
+                    font-family: inherit;
+                    font-size: 13px;
+                    color: #fff;
+                    line-height: 36px;
+                }
+
+                .mejs-container .mejs-controls > .mejs-time-rail {
+                    height: 100%;
+                    padding: 0;
+                    font-family: inherit;
+
+                    .mejs-time-total {
+                        height: 5px;
+                        margin: 15px 14px;
+                        background: none;
+                        background-color: #fff;
+
+                        .mejs-time-current {
+                            height: 5px;
+                            background-color: $first-main-color;
+                        }
+
+                        .mejs-time-float {
+                            top: -14px;
+                            border: 0;
+                            color: #fff;
+
+                            .mejs-time-float-corner {
+                                border-top-color: $default-heading-color;
+                            }
+                        }
+
+                        .mejs-time-loaded,
+                        .mejs-time-float {
+                            background: none;
+                        }
+                    }
+                }
+
+                .mejs-container .mejs-controls > a.mejs-horizontal-volume-slider {
+                    height: 38px;
+
+                    .mejs-horizontal-volume-total,
+                    .mejs-horizontal-volume-current {
+                        height: 5px;
+                        top: 15px;
+                        background: none;
+                    }
+
+                    .mejs-horizontal-volume-total {
+                        background-color: #fff;
+                    }
+
+                    .mejs-horizontal-volume-current {
+                        background-color: $first-main-color;
+                    }
+                }
+            }
+        }
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        // video post format
+        &.format-video {
+            .edgtf-self-hosted-video {
+                max-width: 100%;
+            }
+
+            .edgtf-post-info-list > div a {
+                @include edgtfItalicLink($first-main-color, $default-heading-color, none, !important);
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+   Blog Common style - end
+   ========================================================================== */

@@ -1,0 +1,96 @@
+/* Single author box styles - begin
+	====================================================================== */
+
+.edgtf-author-description {
+    @include edgtfRelativeHolderLayout();
+
+    margin-bottom: 39px;
+    padding: 0;
+    box-sizing: border-box;
+
+    .edgtf-author-description-inner {
+        min-height: 78px; // static height of author image -- edgtf-author-description-image
+        clear: both;
+    }
+
+    .edgtf-author-description-content {
+        position: relative;
+
+        @include edgtfTableLayout();
+    }
+
+    .edgtf-author-description-image {
+        @include edgtfTableCellLayout();
+
+        padding-right: 43px;
+        width: 160px;
+
+        img {
+            display: block;
+        }
+    }
+
+    .edgtf-author-description-text-holder {
+        @include edgtfTableCellLayout();
+
+        .edgtf-author-name {
+            margin: 10px 0 0 0;
+
+            a {
+                color: $default-heading-color;
+
+                &:hover {
+                    color: $first-main-color;
+                }
+            }
+        }
+
+        .edgtf-author-email {
+            margin: 0;
+        }
+
+        .edgtf-author-text {
+            @include edgtfRelativeHolderLayout();
+        }
+
+        .edgtf-author-social-icons {
+            @include edgtfRelativeHolderLayout();
+
+            a {
+                position: relative;
+                display: inline-block;
+                vertical-align: middle;
+                padding: 0;
+                margin: 0 15px 0 0;
+                font-size: 14px;
+                color: $default-text-color;
+
+                &:last-child {
+                    margin: 0;
+                }
+
+                &:hover {
+                    color: $first-main-color;
+                }
+            }
+        }
+    }
+
+    @include ipad-portrait {
+        .edgtf-author-description-content {
+            padding: 0;
+        }
+        .edgtf-author-description-image {
+            display: block;
+            width: 100%;
+        }
+        .edgtf-author-description-text-holder {
+            display: block;
+            padding: 0;
+            margin-top: 30px;
+        }
+    }
+}
+
+/* Single author box styles - end
+	====================================================================== */

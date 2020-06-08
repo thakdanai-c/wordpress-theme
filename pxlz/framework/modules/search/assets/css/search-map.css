@@ -1,0 +1,187 @@
+/* ==========================================================================
+   Search styles - begin
+   ========================================================================== */
+/* common mixins - start */
+/* common mixins - end */
+/* mixins styles - start */
+/* mixins styles - end */
+/* ==========================================================================
+# Search template style - begin
+========================================================================== */
+.edgtf-search-page-holder {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  margin: 0 0 80px;
+}
+
+.edgtf-search-page-holder .edgtf-search-page-form {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  margin: 0 0 30px;
+}
+
+.edgtf-search-page-holder .edgtf-search-page-form .edgtf-search-title {
+  margin: 0 0 20px;
+}
+
+.edgtf-search-page-holder .edgtf-search-page-form .edgtf-search-label {
+  display: block;
+  font-style: italic;
+}
+
+.edgtf-search-page-holder .edgtf-search-page-form .edgtf-form-holder {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  margin: 0 0 28px;
+  clear: both;
+  border-bottom: 3px solid #26ccca;
+}
+
+.edgtf-search-page-holder .edgtf-search-page-form .edgtf-form-holder .edgtf-column-left {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.edgtf-search-page-holder .edgtf-search-page-form .edgtf-form-holder .edgtf-column-right {
+  display: table-cell;
+  width: 1%;
+  text-align: left;
+  vertical-align: top;
+}
+
+.edgtf-search-page-holder .edgtf-search-page-form .edgtf-form-holder .edgtf-search-field {
+  position: relative;
+  width: 100%;
+  height: 48px;
+  line-height: 48px;
+  margin: 0;
+  padding: 0 20px 0 0;
+  font-family: "Oswald", sans-serif;
+  font-size: 25px;
+  color: #888888;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: none;
+  outline: 0;
+  vertical-align: middle;
+  -webkit-appearance: none;
+  box-sizing: border-box;
+}
+
+.edgtf-search-page-holder .edgtf-search-page-form .edgtf-form-holder .edgtf-search-field::-webkit-input-placeholder {
+  color: inherit;
+}
+
+.edgtf-search-page-holder .edgtf-search-page-form .edgtf-form-holder .edgtf-search-field:-moz-placeholder {
+  color: inherit;
+}
+
+.edgtf-search-page-holder .edgtf-search-page-form .edgtf-form-holder .edgtf-search-field::-moz-placeholder {
+  color: inherit;
+}
+
+.edgtf-search-page-holder .edgtf-search-page-form .edgtf-form-holder .edgtf-search-field:-ms-input-placeholder {
+  color: inherit;
+}
+
+.edgtf-search-page-holder .edgtf-search-page-form .edgtf-form-holder .edgtf-search-submit {
+  position: relative;
+  display: inline-block;
+  width: auto;
+  height: 48px;
+  line-height: 48px;
+  padding: 0;
+  font-size: 20px;
+  color: #0d0d0d;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  vertical-align: middle;
+  -webkit-transition: color 0.2s ease-in-out;
+  -moz-transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
+}
+
+.edgtf-search-page-holder .edgtf-search-page-form .edgtf-form-holder .edgtf-search-submit:hover {
+  color: #26ccca;
+}
+
+.edgtf-search-page-holder article {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  padding: 30px 0;
+  margin: 0;
+  border-bottom: 2px solid #f5f5f5;
+}
+
+.edgtf-search-page-holder article.sticky .edgtf-post-title a {
+  color: #26ccca;
+}
+
+.edgtf-search-page-holder article.page .edgtf-post-title-area .edgtf-post-info > div.edgtf-post-info-category {
+  display: none;
+}
+
+.edgtf-search-page-holder article .edgtf-post-content {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.edgtf-search-page-holder article .edgtf-post-image {
+  display: block;
+  float: left;
+  width: 130px;
+}
+
+.edgtf-search-page-holder article .edgtf-post-image a, .edgtf-search-page-holder article .edgtf-post-image img {
+  display: block;
+}
+
+.edgtf-search-page-holder article .edgtf-post-title-area {
+  min-height: 130px;
+  padding: 0 0 0 150px;
+}
+
+.edgtf-search-page-holder article .edgtf-post-title-area.edgtf-no-thumbnail {
+  padding: 0;
+  min-height: inherit;
+}
+
+.edgtf-search-page-holder article .edgtf-post-title-area .edgtf-post-title-area-inner {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.edgtf-search-page-holder article .edgtf-post-title-area .edgtf-post-title-area-inner .edgtf-post-title {
+  margin: 0;
+}
+
+.edgtf-search-page-holder article .edgtf-post-title-area .edgtf-post-title-area-inner .edgtf-post-excerpt {
+  margin: 7px 0 0;
+}
+
+.edgtf-search-page-holder .edgtf-blog-pagination {
+  margin: 50px 0 0;
+}
+
+/* ==========================================================================
+# Search template style - end
+========================================================================== */
+/* ==========================================================================
+   Search styles - end
+   ========================================================================== */
+
+/*# sourceMappingURL=../css/search-map.css.map */
