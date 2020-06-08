@@ -55,7 +55,7 @@ class TI_About_Render {
 
 		echo '<div class="loading-screen">';
 		echo '<div class="updating-message">';
-		echo '<p>' . esc_html__( 'Loading', 'hestia' ) . '...</p>';
+		echo '<p>' . esc_html__( 'Loading', 'neve' ) . '...</p>';
 		echo '</div>';
 		echo '</div>';
 
@@ -386,7 +386,7 @@ class TI_About_Render {
 		}
 
 		if ( $button['link'] === '#recommended_actions' && $this->about_page->get_recommended_actions_left() === 0 ) {
-			echo '<span>' . esc_html__( 'Recommended actions', 'hestia' ) . '</span>';
+			echo '<span>' . esc_html__( 'Recommended actions', 'neve' ) . '</span>';
 
 			return;
 		}

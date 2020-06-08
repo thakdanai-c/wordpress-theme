@@ -1,1217 +1,1300 @@
-=== Hestia Pro ===
+=== Neve ===
 Contributors: themeisle
-Tags: blog, custom-logo, portfolio, e-commerce, rtl-language-support, post-formats, grid-layout, one-column, two-columns, custom-background, custom-colors, custom-header, custom-menu, featured-image-header, featured-images, flexible-header, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready, editor-style, footer-widgets, left-sidebar, right-sidebar, wide-blocks
+Tags: blog, custom-logo, e-commerce, rtl-language-support, grid-layout, one-column, two-columns, custom-background, custom-colors, custom-header, custom-menu, featured-image-header, featured-images, flexible-header, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready, accessibility-ready, wide-blocks, block-styles, footer-widgets, portfolio, left-sidebar, right-sidebar
 Requires at least: 4.0
-Tested up to: 5.0
-Stable tag: 2.0.7
+Tested up to: 5.4
+Stable tag: 1.0.23
+Requires PHP: 5.4.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Hestia Pro fits all business, startups, corporate businesses, online companies, portfolios, e-commerce (WooCommerce), and freelancers.
+Neve is a super fast, easily customizable, multi-purpose theme. Perfect for blogs, small business, startups, agencies, firms & e-commerce shops.
 
 == Description ==
-Hestia is a modern WordPress theme for professionals. It fits creative business, small businesses (restaurants, wedding planners, sport/medical shops), startups, corporate businesses, online agencies and firms, portfolios, ecommerce (WooCommerce), and freelancers. It has a multipurpose one-page design, widgetized footer, blog/news page and a clean look, is compatible with: Flat Parallax Slider, Photo Gallery, Travel Map and Elementor Page Builder . The theme is responsive, WPML, Retina ready, SEO friendly, and uses Material Kit for design.
+Neve is a super fast, easily customizable, multi-purpose theme. It’s perfect for blogs, small business, startups, agencies, firms, e-commerce shops (WooCommerce storefront) as well as personal portfolio sites and most types of projects. A fully AMP optimized and responsive theme, Neve will load in mere seconds and adapt perfectly on any viewing device. While it is lightweight and has a minimalist design, the theme is highly extendable, it has a highly SEO optimized code, resulting in top rankings in Google search results. Neve works perfectly with Gutenberg and the most popular page builders (Elementor, Brizy, Beaver Builder, Visual Composer, SiteOrigin, Divi). Neve is also WooCommerce ready, responsive, RTL & translation ready. Look no further. Neve is the perfect theme for you!
 
 == Copyright ==
-Hestia WordPress theme, Copyright 2018 Themeisle
-Hestia is distributed under the terms of the GNU GPLv2 or later
+Neve WordPress theme, Copyright 2018 Themeisle
+Neve is distributed under the terms of the GNU GPLv2 or later
 
 == Changelog ==
 
-##### [Version 3.0.1](https://github.com/Codeinwp/hestia-pro/compare/v3.0.0...v3.0.1) (2020-05-11)
+##### [Version 2.7.2](https://github.com/Codeinwp/neve/compare/v2.7.1...v2.7.2) (2020-06-04)
 
-[Fix] Missing Font Awesome icons
-[Fix] Fatal error when using Yoast
-[Fix] Secondary color missing in the blocks color palette
-[Fix][Pro] Second button link in the Big title section
-[Fix][Pro] Check if attachment exists when swap images are used on the Shop page
-[Fix][Pro] Seamless add to cart mechanism
-
-
-
-
-#### [Version 3.0.0](https://github.com/Codeinwp/hestia-pro/compare/v2.5.7...v3.0.0) (2020-04-28)
-
-- [Feat] [PRO] New Custom Layouts module
-- [Feat] [PRO] New options for Single Products ( Exclusive Products, Seamless Add to Cart )
-- [Feat] [PRO] New Payment Icons on the Cart page
-- [Feat] [PRO] New option for custom image style effects on the Shop page
-- [Feat] New layout control for the Shop Sidebar
-- [Feat] [PRO] New Off-Canvas Sidebar option for the Shop Page
-- [Feat] Option to enable/disable cross-sells products on the Cart page
-- [Feat] Moved Starter Sites remotely
-- [Fix] Code refactoring and improvements
-- [Fix] Load Font Awesome based on usage
-- [Fix] Upgrade default Font Awesome icons to FA 5
-- [Fix] Related products layout when using Elementor Pro Single Product template
-- [Fix] [PRO] Compatibility with Elementor Pro Header and Footer templates
-- [Fix] [PRO] Duplicated related product image in Elementor Pro templates
-- [Fix] Small tweaks to the White Label module
-- [Fix] Header Background color in the WP editor blocks
-- [Fix] Transparent logo on mobile
-- [Fix] Allow skipping cropping the transparent logo
-- [Fix] Slider icons position in RTL mode
-- [Fix] Display tags on product pages
+- [Feat] Three layouts for the header builder Search Icon component ( Canvas, Minimal and Float above Header )
+- [Feat] Styling controls for the header builder Search Icon and Search Form components
+- [Feat] Support for post formats
+- [Feat] New neve_before_header_wrapper_hook and neve_after_header_wrapper_hook hooks
+- [Fix] Dismissable notice for contributing to Neve
+- [Fix] Support for Main image width and Thumbnail width options in WooCommerce ( to fix blurred images on the Shop page )
+- [Fix] Wrong default padding for buttons
+- [Fix] Wrong content width for grouped blocks
+- [Fix] Neve Options page not loading in Microsoft Edge v18
+- [Fix] Update list of Google Fonts
+- [Fix] Google lighthouse reports not unique ID attribute
+- [Fix] Live refresh with the Primary Menu hover skin option
 
 
 
-= 2.5.7 - 2020-04-01  = 
 
-* Add new post causes errors in WP 5.4
+##### [Version 2.7.1](https://github.com/Codeinwp/neve/compare/v2.7.0...v2.7.1) (2020-05-21)
 
-
-= 2.5.6 - 2019-12-17  = 
-
-* [Fix] Logo positioning for the third navigation layout option and no widgets
-* [Fix] Sync between the image set as the featured image for the Frontpage and the image from the About section
-* [Fix] Customizer icons missing when Font Awesome was not loaded
-* [Fix] Compatibility with the Menu Icons plugin while the transparent menu is on
-
-
-= 2.5.5 - 2019-11-14  = 
-
-* [Feat] Dedicated logo option for the transparent header
-* [Fix] Subscribe form on the blog page
-* [Fix] Line separator compatibility with WP 5.3
+- [Feat] Replaced Skin Mode control with a Text Color control in the header builder rows
+- [Fix] Apply row background color to menu dropdowns
+- [Fix] Filter by price widget button default background-color
+- [Fix] Make the alignment classes more generic to allow overwriting from block specific settings
+- [Fix] Clickable links in the Changelog area
+- [Fix] Neve Options page on lower resolutions
+- [Fix] Check for the Rest API endpoint before allowing users to start an import
 
 
-= 2.5.4 - 2019-10-21  = 
 
-* [Fix] Blog page Infinite Scroll compatibility with the Alternative layout
+
+#### [Version 2.7.0](https://github.com/Codeinwp/neve/compare/v2.6.6...v2.7.0) (2020-05-13)
+
+- [Feat] Improved Neve Options page and onboarding experience
+- [Feat] Integration with the Toolset plugin
+- [Feat] Improved dynamic CSS generation & Gutenberg integration
+- [Fix] Yellow background on the number of products in categories on the Shop page
+- [Fix] Secondary Menu alignment on mobile
+- New starter sites
+- Book Shop - https://themeisle.com/demo/?theme=Book%20Shop
+- Psychologist - https://themeisle.com/demo/?theme=Psychologist
+- Doctors - https://themeisle.com/demo/?theme=Doctors%202
+- Pet Shop - https://themeisle.com/demo/?theme=Pet%20Shop
+- Apparel - https://themeisle.com/demo/?theme=Apparel
+- Boat Rental - https://themeisle.com/demo/?theme=Boat%20Rental
+- Jewellery Shop - https://themeisle.com/demo/?theme=Jewellery%20Shop%202
+- Perfume Shop - https://themeisle.com/demo/?theme=Perfume%20Shop
+- Music Band - https://themeisle.com/demo/?theme=Music%20Band%202
+- Fitness Trainer - https://themeisle.com/demo/?theme=Fitness%20Trainer
+
+
+
+
+##### [Version 2.6.6](https://github.com/Codeinwp/neve/compare/v2.6.5...v2.6.6) (2020-04-07)
+
+- [Fix] Background color for mobile menu
+- [Fix] Last Menu Search icon in AMP
+
+
+
+
+##### [Version 2.6.5](https://github.com/Codeinwp/neve/compare/v2.6.4...v2.6.5) (2020-04-06)
+
+- [Fix] Infinite scroll with masonry scrolling to the top of page
+- [Fix] Variations product select height on iPhone
+- [Fix] JS error regarding customizer typography line-height suffix
+- [Fix] Max Mega Menu alignment
+- [Fix] Firefox Customizer visual bugs
+- [Fix] Compatibility with latest Gutenberg version
+- [Fix] Add missing role=button and tabindex=0 for search icon button for AMP
+- [Fix] Small performance tweaks and optimizations
+- New Gutenberg Starter Sites
+
+
+
+
+##### [Version 2.6.4](https://github.com/Codeinwp/neve/compare/v2.6.3...v2.6.4) (2020-03-23)
+
+- [Fix] Disable admin notice
+- New Gutenberg Starter Sites
+
+
+
+
+##### [Version 2.6.3](https://github.com/Codeinwp/neve/compare/v2.6.2...v2.6.3) (2020-03-19)
+
+* [Feat] Refactor customizer UI
+* [Fix] Compatibility issues with WP 5.4
+* [Fix] Compatibility with WooCommerce Product Addon plugin
+
+
+
+= 2.6.2 - 2020-02-26  =
+
+* [Feat] New text color option for the HTML and Copyright components
+* [Feat] New option to Disable Homepage Link in the Logo & Site Identity component
+* [Fix] Issues in AMP when using Google Tag Manager Codeless Injection
+* [Fix] Footer menu alignment
+* [Fix] Mega Menu not working in Edge
+* [Fix] Narrow editor with the new Gutenberg version
+* New Gutenberg and Beaver Builder Starter Sites
+
+
+= 2.6.1 - 2020-02-13  =
+
+* [Feat] New header presets
+* [Feat] New justify option for the button component
+* [Feat] New menu item spacing and menu item height options
+* [Fix] Style closing menu icon to match menu icon
+* [Fix] Primary and secondary menu alignments
+* [Fix] Made button a mergeable component in the header builder
+* [Fix] Changed the Leave a reply title to H3
+* [Fix] Search form width when merged with mergeable components
+* [Fix] Selective refresh on non-header builders
+* [Fix] Notice from array offset in responsive style method
+* [Fix] Page break pagination not appearing on the blog page
+
+
+= 2.6.0 - 2020-02-03  =
+
+* [Feat] Adds quantity box back to the product pages 
+* [Feat] Better organize the Woocommerce controls in the customizer
+*  [Fix] Fixed metabox range input style in Firefox 
+* [Fix] Fixed editor alignment for the quote block
+*  [Fix] Fixed sidebar layout not updating on single product pages [Fix] Fixed search results page sidebar when using Elementor
+*  [Fix] Fixed expanded cart positioning
+* New Starter Sites
+*  Web Agency - https://themeisle.com/demo/?theme=Web%20Agency
+*  Blogger -  https://themeisle.com/demo/?theme=Blogger
+
+
+= 2.5.4 - 2019-12-19  =
+
+* [Feat] New styling options for buttons in the header builder
+* [Feat] New dynamic tags for the header and footer builder
+* [Fix] External fonts not loading in editor
+* [Fix] Removed unnecessary post metadata saved in the database
+* [Fix] Improved primary menu closing animation on mobile
+* [Fix] Button block preview in the editor
+* [Fix] Compatibility with the latest update of Gutenberg
+* [Fix] Improved padding and margin components layout
+* [Fix] Button border-radius control default value not allowing a zero value
+* [Fix] Made default layout full width when the sidebar is empty
+
+
+= 2.5.3 - 2019-12-05  =
+
+* [Feat] New option to allow both logo and site and tagline in different layouts
+* [Feat] New dedicated typography controls for the Primary, Secondary and Footer menus, HTML, Copyright, Cart and Search icons components on the header builder
+* [Fix] Embeds compatibility issues with Jetpack and the Embed Plus for YouTube – Gallery, [Fix] Channel, Playlist, Live Stream plugin
+* [Fix] Excerpt compatibility with the Seriously Simple Podcasting plugin
+* [Fix] Removed list styling from the All Products block in the WooCommerce Block plugin
+* [Fix] Content width live preview on mobile devices
+* [Fix] Replaced the Last menu item option with dedicated components for new users
+* [Fix] Removed Neve Visual Integration causing issues in the editor
+* [Fix] Copyright component striping spaces before and after links
+* [Fix] Replaced buttons old padding control with a new version
+* [Fix] Padding for the Menu Icon component
+* [Fix] Lists spacing alignment
+* [Fix] Updated Google Fonts list
+* [Fix] Getting post meta value for single product page meta-box
+
+
+= 2.5.2 - 2019-11-19  =
+
+* [Feat] Improved mobile header/footer builder UX
+* [Feat] New styling controls for the Menu Icon component
+* [Feat] New Filled and Outline style options for buttons
+* [Fix] Uploading background images in the header/footer builder
+* [Fix] Content alignment when Gutenberg is activated
+* [Fix] Multiple embeds not visible on the single post page
+* [Fix] Better alignment for small icon components of the header/footer builder
+* [Fix] Excerpts now inherit text color
+* [Fix] Single product titles now inherit H1 typography options
+* [Fix] Typography units changes did not trigger control refresh
+* [Fix] Enlarged the narrow content in the editor
+* [Fix] Removed hover effect on table rows overriding block colors
+* [Fix] Overriding header/footer builder templates using child themes
+
+
+= 2.5.1 - 2019-11-04  =
+
+* [Fix] Correct migration of body font size to new version
+
+
+= 2.5.0 - 2019-11-04  =
+
+* [Feat] Improve header/footer builder UX
+* [Feat] Increased header/footer builder row height to 700px
+* [Feat] Improve typography controls, adds Text Transform, Font Weight, Letter Spacing controls for headings.
+* [Feat] Shadow option for the blog thumbnails
+* [Fix] Removed extra padding-top on embeds
+* [Fix] Embeds not visible on the blog page
+* [Fix] Small compatibility issues with WP 5.3
 * [Fix] Cover block text color not updating
-* [Fix][Hestia Pro] Shop page Infinite Scroll compatibility with widgets filtering
-* [Fix][Hestia Pro] Header layout selection for the Shop page
-* [Fix][Hestia Pro] Slider arrows position on RTL
+* [Fix] Reply comments mechanism when Yoast is installed
+* [Fix] Scroll on mobile and tablet and wireframe view in the Divi editor
+* [Fix] Content width on full-width container
+* [Fix] Headings blocks errors with Gutenberg 6.8.0
+* New Beaver Builder Starter Sites
+* New Brizy Starter Sites
 
 
-= 2.5.3 - 2019-09-13  = 
 
-* [Fix] Improved About page layout
-* [Fix] License validation mechanism for Starter Sites
+= 2.4.3 - 2019-10-10  =
 
+* [Feat] Compatibility with the Header Footer for Beaver Builder plugin
+* [Feat] Integrate Cypress E2E testing
+* [Fix] Header button component padding affected by general buttons options
+* [Fix] Set newly created pages to Full width
+* [Fix] Embeds in the Classic Editor
+* [Fix] Compatibility with the Smush Lazy Loading
 
-= 2.5.2 - 2019-09-12  = 
+* [Fix] Alignment options for the Secondary and Footer menus
+* [Fix] Style ul/li on WooCommerce single product short descriptions
+* [Fix] Add support for responsive embeds
+* New Beaver Builder Starter Sites: Freelancer & Life Coach
 
-* [Fix] Compatibility with Elementor Pro Menu Cart widget
-* [Fix] Mail and phone icons compatibility with FA5
-* [Fix] Primary menu icons spacing and alignment
-* [Fix] Uppercase submenu items back to Sentence case
-* [Fix] WooCommerce product gallery images not clickable on mobile
-* [Perf] Small performance fixes
 
+= 2.4.1 - 2019-09-13  =
 
-= 2.5.1 - 2019-08-13  = 
+* [Feat] New background image options for the header and the footer
+* [Feat] Allow custom shortcodes in the HTML components of the header
+* [Fix] Improve the cart menu icon, remove empty products message on the dropdown menu
+* [Fix] Issue with duplicating thumbnails when using SG Optimizer Lazy Load option
+* [Fix] On-print behavior, causing duplicating of the header elements
+* [Fix] Page scroll while menu sidebar is open
+* [Fix] Search icon alignment options
+* [Fix] Issue with hiding the thumbnail on single post pages
+* [Fix] Improve header customization UX
+* [Fix] Validation errors in AMP
+* New Starter Sites
+* Tattoo - https://themeisle.com/demo/?theme=Tattoo
+* Life Coach - https://themeisle.com/demo/?theme=Life%20Coach
+* Creative Portfolio - https://themeisle.com/demo/?theme=Creative%20Portfolio
+* Redesigned Starter Sites
+* Energy Panels - https://themeisle.com/demo/?theme=Energy%20Panels
+* Lawyers - https://themeisle.com/demo/?theme=Lawyers
+* Freelancer - https://themeisle.com/demo/?theme=Freelancer
+* New Beaver Builder Starter Sites
 
-* [Fix] - Header layout on the front page
-* [Fix] - Removed Hestia's custom integration with Gutenberg
-* [Fix] - Social menu icons compatibility with FA5
 
+= 2.4.0 - 2019-08-14  =
 
-= 2.5.0 - 2019-08-08  = 
+* Fix issue with standard fonts not loading
+* Fix compatibility with Async loading of javascript files
+* Fix issue with page title on pages built with Elementor
+* Adds individual line-height option
+* Adds breadcrumbs compatibility with Yoast, Seopress, Rankmath and NavXT
+* Performance improvements to the codebase, optimize CSS/JS file loading
+* Adds 5 more starter sites
 
-* Migrated to Font Awesome 5
-* Updated the Starter Sites library
 
 
-= 2.4.9 - 2019-08-01  = 
+= 2.3.22 - 2019-08-02  =
 
-* Allow copyright text to be changed in both Hestia and Hestia PRO
-* Allow HTML tags in the title and subtitle fields of the Portfolio section
-* Create a WPForms form as a default value for the Contact section
-* Updated the Google Fonts Library
-* Fixed header layout on the tags archive page
-* Fixed issue with accent color not affecting links in the front-end
-* Made sure the header image is translatable with WPML
-* Fixed sidebar layout metabox not appearing when WooCommerce was not installed
+* Speed updates for the Starter Sites Library
 
 
-= 2.4.8 - 2019-07-23  = 
+= 2.3.21 - 2019-07-30  =
 
-* Speed improvement update for the Hestia Default Demo
-* [Hestia PRO] Fixed licensing issue in the onboarding mechanism
+* [Feat] Color options for each header and footer rows
+* [Feat] New Starter Sites in the library: Architecture, Fitness, Vacation Rental, and Music Band
+* [Fix] Posts overlapping when the Masonry layout was enabled on a slow Internet connection
+* [Fix] Importing options from any child theme of Zelle
+* [Fix] Updated the Google Fonts Library
+* [Fix] Improved layout of the My Account page
+* [Fix] Updated components default width in the Header builder to better accommodate each one
+* [Fix] Issue with multiple Shipping methods not aligning properly on the Cart page
+* [Fix] Sale tag that was cut off in the Exclusive Product section
+* [Fix] Redone the spacing control option
+* [Fix] Removed Neve's custom integration with Gutenberg by default
+* [Fix] Vertically align widgets in the footer area
+* [Fix] Slightly larger default height for buttons and inputs for a better layout
+* [Perf] Moved customizer CSS code to inline code for better speed results
 
 
-= 2.4.7 - 2019-07-22  = 
+= 2.3.20 - 2019-07-15  =
 
-* Fixed issue with Starter Sites not available in the pro packages
+* Updated composer
+* Fixed z-index issue with the About page
 
 
-= 2.4.6 - 2019-07-18  = 
+= 2.3.19 - 2019-07-15  =
 
-* New Customizer option to control the header area on single product pages
-* [Hestia PRO] New meta option to control the header area on individual single product pages
-* Fixed alignment issue between the author title and the author image on mobile devices
-* Fixed header layout issue on the category page being affected by the first article layout
-* Move two items per line instead of one in the Our Team section for a better spacing
-* Lower header area and font sizes on mobile for better usage of the space
-* Darken color for the labels on the Checkout page
+* Release
 
 
-= 2.4.5 - 2019-05-27  = 
+= 2.3.18 - 2019-07-15  =
 
-* Fixed editor visual integration with the latest update of WordPress
-* Fixed duplicated comments area when using Elementor Pro templates
+* Multiple speed optimizations: minified scripts, improved enqueued scripts logic, proper size for the gravatar images
+* Removed author gravatar image by default and created a new option for it
+* Updates for current Starter Sites library
+* New Brizy Starter Sites library
 
 
-= 2.4.4 - 2019-04-22  = 
+= 2.3.17 - 2019-07-08  =
 
-* Removed weird scroll on the blog page
+* Fixed theme check warning
 
 
-= 2.4.3 - 2019-04-22  = 
+= 2.3.16 - 2019-07-08  =
 
-* New logging mechanism to the onboarding module
-* Improved the whole routine for the content import in the onboarding module
-* Added new wp_body_open() function for WP 5.2
-* Fixed logo disappearing on scroll on the distraction-free checkout mode
-* Made blog text color darker when using the full content articles option
-* Fixed portfolio featured image not visible in Firefox in the lightbox
-* Fixed overlapping content on the blog page
-* Fixed incorrect title attribute for the primary menu
-* Fixed Shop page layout on the third header layout
-* Remove title appearing in the navigation cart in the latest update of WooCommerce
+* Fixed divider layout in the custom Mega Menu integration
+* Fixed onboarding popup for child themes
+* Fixed lists styling in the comments area
+* Fixed warnings from order control
 
 
-= 2.4.2 - 2019-04-02  = 
+= 2.3.15 - 2019-06-28  =
 
-* Updated the Starter Sites library
+* Fixed primary menu on mobile devices not closing for anchor links
+* Fixed menu items description layout in the primary menu
+* Auto-focus in the search input
 
 
-= 2.4.1 - 2019-03-29  = 
+= 2.3.14 - 2019-06-25  =
 
-* Compatibility with the Header, Footer & Blocks for Elementor plugin
-* New Agency Travel Demo Starter Site
-* Fixed issue with the color picker needing two clicks
-* Updated the Contact and Facebook community links
-* Updated tags list with the new tags
-* Fixed importing issues with the Starter Sites
-* Fixed White Label error appearing lower PHP versions
-* Fixed issue with contact form shortcode not being translation ready
-* Updated Starter Sites library images
+* Fixed compatibility issues with the Max Mega Menu plugin
+* Fixed compatibility with Neve's custom Mega Menu integration
+* Fixed extra padding for the gallery block
+* Fixed author bio's image size and alignment
+* Fixed accessibility and RTL issues with the header builder
+* Fixed lists styling in the comments area
+* Compatibility for Neve Pro's Typekit module
 
 
-= 2.4.0 - 2019-03-21  = 
+= 2.3.12 - 2019-06-17  =
 
-* [Hestia Pro] New White Label module
-* Fixed issue with Big Title buttons shadow color
-* Fixed issue with Portfolio pop-up not opening in Microsoft Edge
-* Fixed issue with Blog options taking control over the custom post types archives pages
-* Fixed issue with invalid CSS inline style
+* Added missing strings in the translation file wpml-config.xml file
+* Updated the min PHP version in the readme file
+* Upsells for Neve Pro
 
 
-= 2.3.0 - 2019-03-01  = 
+= 2.3.11 - 2019-06-12  =
 
-* Fixed products categories layout on the Shop pane and Homepage
-* Fixed issue with the title attribute not escaping HTML tags in the primary menu
-* New Hestia Original starter site
+* Redone the layout for the About page
+* Added fallbacks for JS features in AMP mode
+* Added compatibility between the LifterLMS plugin and the buttons options
+* Improved the WooCommerce My Account page layout on mobile devices
 
 
-= 2.2.1 - 2019-02-12  = 
+= 2.3.10 - 2019-06-04  =
 
-* [Hestia PRO] Fixed issue with the [hestia_slider] shortcode not working
-* Fixed search results page layout when using the second header option
-* Replaced Google+ sharing option with an Email option
-* Fixed link for sharing on Twitter option
-* Fixed issue with color control updating only after two clicks
-
-
-= 2.2.0 - 2019-02-06  = 
-
-* NEW Hestia Specific Gutenberg blocks for Otter Blocks
-* Improved the onboarding process
-* New filter for compatibility with the Central Color Palette plugin
-* Fixed default font weight for headings
-* Fixed issue with default small font size for lists
-* Allow HTML tags in the single product page title
-* Fixed problem with the footer not sticking to the bottom of the blog page
-* Fixed warning with the Connections plugin
-
-
-= 2.1.1 - 2019-01-17  = 
-
-* Changed the boxed layout for the third header layout
-* Improved layout of the onboarding notice and page
-* Small layout fixes for the Orfeo child theme
-* Fixed the upgrade link
-
-
-= 2.1.0 - 2019-01-09  = 
-
-* NEW Custom integration with Gutenberg
-* NEW Options to differentially enable/disable navigation and footer areas on posts/pages
-* Fixed compatibility with Everest Forms plugin
-* Fixed compatibility with Quiz Cat plugin
-* Fixed problem with the About Section background image remaining fixed in Firefox
-* Removed the Featured tag for the sticky posts
-
-
-= 2.0.19 - 2018-12-18  = 
-
-* Fixed WooCommerce related product layout in Fagri
-* Fixed issue with the Very Top Bar not visible on Elementor Full Width page templates
-* Fixed issue with the Contact section content area that did not opened with Gutenberg
-
-
-= 2.0.18 - 2018-12-12  = 
-
-* Revert Font Awesome 5
-
-
-= 2.0.17 - 2018-12-11  = 
-
-* Update to Font Awesome 5
-
-
-= 2.0.16 - 2018-12-10  = 
-
-* Updated Tested up to version to 5.0
-* Removed unused notice
-
-
-= 2.0.15 - 2018-12-05  = 
-
-* Fixed problem with Very Top Bar not visible on mobile on the single product page
-* Recommend Otter Blocks plugin
-
-
-= 2.0.14 - 2018-11-30  = 
-
-* Fixed issues with the Hestia Woocommerce Demo
-* Updated theme license
-* Added back filter to allow you to display the product image in the header of the single product page
-
-
-= 2.0.13 - 2018-11-28  = 
-
-* Fixed issues with retina images on the shop page
-* Fixed import from Zelle
-* Updated the Hestia WooCommerce demo
-* Recommend Neve
-
-
-= 2.0.12 - 2018-11-16  = 
-
-* Update readme file
-* Fixed warnings on the typography file
-* [Fagri child theme] fix padding issue on the Pirate Forms form
-
-
-= 2.0.11 - 2018-11-09  = 
-
-* Fixed fatal error happening in a few cases
-
-
-= 2.0.10 - 2018-11-06  = 
-
-* Fixed compatibility with the latest release of WooCommerce
-* Fixed compatibility with Google Console
-* Added config file for Toolset plugin
-* New filters used for child themes
-
-
-= 2.0.9 - 2018-11-05  = 
-
-* Fixed Google Console issues
-* Small tweaks for the Sites Library Demos
-
-
-= 2.0.8 - 2018-11-02  = 
-
-* Gutenberg support
-* Fixed import for Zelle ( Zerif ) to Elementor
-* Improved title responsive font size for the 2nd and 3rd header layouts
-* Refactored the About Hestia page
-* Updated the readme file with correct license and used resources
-* Fixed some escaping issues
-* Fixed compatibility issues with the child themes
+* New color, padding and border radius options for Primary and Secondary Buttons
+* Fixed issue with duplicated posts on the blog page
+* Fixed onboarding sites options throwing warnings after the last menu item migration
 * Updated the screenshot
-* Fixed error causing customizer not to load after a demo templated was imported
-
-
-
-= v2.0.4 =
-*Release Date - 2018-09-11*
-
-* Fixed issue with the dropdown menu active items
- 
-= v2.0.3 =
-*Release Date - 2018-09-11*
-
-* Fixed issues with the header layout option
-* [Hestia PRO] Fixed problem with embeds not working in the Portfolio lightboxes
-* Fixed issue with the category description not visible on the category archive page
-* [Hestia PRO] Fixed compatibility issues with Elementor Pro
-* New filter for the Related Posts title that can be changed using this doc https://docs.themeisle.com/article/937-change-related-post-title-on-post-page-in-hestia-theme
- 
-= v2.0.2 =
-*Release Date - 2018-08-29*
-
-* Fix issue with Import Zerif to Elementor notice
-* Fix issue with the navigation menu on the tablet
- 
-= v2.0.1 =
-*Release Date - 2018-08-24*
-
-* Fixed issue with woocommerce buttons
-* Fixed issue on third layout on blog
-* Make elementor import notice dismissible
- 
- = v2.0.0 =
- *Release Date - 2018-08-24*
-
-* NEW options for styling the buttons padding and border radius
-* [Hestia PRO] NEW option for styling the buttons hover effect ( color or shadow )
-* NEW options for the Blog page ( choose content or excerpt, type of pagination and hide the categories )
-* [Hestia PRO] NEW layout for the Blog page with a customizable number of columns and masonry option
-* New option to allow the Big Title section to be disabled
-* New option to disable the custom Frontpage sections
-* Fixed title problem on the archive pages for Chinese locals
-* Optimized and minified the CSS and JS files
-* Fixed issue with white bar appearing on mobile devices on the single product page
-* Refactored the code for the primary menu
-* Fixed issues with Elementor blocks extending outside the content of the page
-* Fixed issues with TinyMCE
-* Improved compatibility with the WPForms Lite plugin
-* Fixed issue on shop with older browsers
- 
- = v1.1.86 =
-*Release Date - 2018-08-13*
-
-* Updated screenshot
- 
- = v1.1.85 =
-*Release Date - 2018-07-26*
-
-* Improved UX for the Subscribe section in Customizer
-* Improved compatibility with the WooCommerce Compare List plugin
-* Improved compatibility with the Max Mega Menu plugin
-* Fixed title problem on the archive pages for locals different than English
-* Fixed small layout compatibility problem with Elementor
- 
-= v1.1.84 =
-*Release Date - 2018-07-19*
-
-* Fixed compatibility issues with Thrive Architect plugin
-* Fixed layout issues for WooCommerce products and categories cards
-* Fixed layout issues for the Shop page on Internet Explorer 11
-* Redone the way sections can be overridden in child themes using this documentation:
-* https://docs.themeisle.com/article/918-how-to-override-sections-in-hestia-pro
- 
-= v1.1.83 =
-*Release Date - 2018-07-06*
-
-* Fixed js console errors
-* Fixed mobile issue with the fallback image for the video header
-
-= v1.1.82 =
-*Release Date - 2018-07-05*
-
-* [Hestia PRO] Fixed problem with Big Title video size on larger devices
-* [Hestia PRO] Fixed problem with the number of widget areas option in the Footer
-* Made transition to a default theme, when a PHP version lower than 5.3.29 is used
-* Fixed problem with the duplicated description on the products categories page
-* Fixed problem with the missing cookie field in the comments form
-* Fixed layout problem for categories on the Shop page
-* Fixed compatibility with Orfeo child theme
-* Improved Clients Bar section layout
-* Small code improvements
- 
-= v1.1.81 =
-*Release Date - 2018-06-26*
-
-* Fixed products alignment issue on the shop page when a left sidebar is used
-* Fixed problem with the Big Title alignment option callback function
- 
-= v1.1.80 =
-*Release Date - 2018-06-25*
-
-* Fixed issue with style enqueued for the About page
- 
-= v1.1.79 =
-*Release Date - 2018-06-25*
-
-* Improved compatibility with WooCommerce Product Catalog options
-* Fixed responsive alignment issues in the Big Title section
-* Fixed issue with product/articles categories colors
-* Improved frontpage Products section layout
- 
-= v1.1.78 =
-*Release Date -  2018-06-21*
-
-* Refactored the entire code
-* Redone the Big Title section for a better UX
-* Fixed Big Title buttons alignment and notice on the checkout page in the Orfeo child theme
- 
-= v1.1.77 =
-*Release Date - 2018-05-24*
-
-* Fixed compatibility with WP GDPR Compliance plugin
-* Fixed problem with the Big Title Background not being able to be removed
-* Fixed problem with default content added in the Very Top Bar section
- 
-= v1.1.76 =
-*Release Date - 2018-05-18*
-
-* Fixed problem with some redundant strings in the lite version
- 
-= v1.1.75 =
-*Release Date - 2018-05-18*
-
-* NEW Feature to allow a widget area in the Big Title/Slider section
-* [Hestia PRO] Fixed alignment for the Authors Section on the Blog page
-* Fix fatal error on lower PHP versions
- 
- = v1.1.74 =
- *Release Date - 2018-05-10*
-
-* [Hestia PRO] New Icon picker option in the Pricing section
-* Fixed problem with title meta in the Archive page header when the language is different than English
-* Fixed problem with duplicated titles when using the second header layout option
-* Fixed problem with the Big Title Second Button control not working in the Orfeo child theme
-* Fixed some layout issues with the WooCommerce filtering widgets in the Footer area
- 
-= v1.1.73 =
-*Release Date - 2018-04-24*
-
-* Improved Cart page layout on mobile
-* Fixed problem with the About and Contact sections editor not saving the input
-* Fixed problem with footer section on internal pages in IE11
-* Removed meta on the Archive pages - Doc to add them back https://docs.themeisle.com/article/793-how-to-add-back-category-tag-author-in-the-archive-title-in-hestia
- 
-= v1.1.72 =
-*Release Date - 2018-04-17*
-
-* Compatibility with Elementor Pro 2.0 theme location API header and footer
-* NEW extra options for the Big title/Slider area - Parallax effect 
-* UX Customize layout improvements
-* Fixed layout compatibility issues with the sidebar on bbpress and BuddyPress pages
-* Fixed layout of the Search products widget
-* Allow a shortcode for the Contact section
-* Improved compatibility with Pirate Forms Extended plugin
-* Fixed issue with sidebar position when the option for logged in users to be able to post comments is enabled
-* Fixed problem with footer sticking to the bottom of the page when to little content
-* Made reCaptcha button smaller on mobile devices to better accommodate the layout
- 
-= v1.1.71 =
-*Release Date - 2018-03-14*
-
-* Fixed problem with the preview images not showing anymore on the blog page
-* Fixed problem with the parallax effect on inner pages
- 
-= v1.1.70 =
-*Release Date - 2018-03-08*
-
-* Fixed alignment issues with the Featured posts area
- 
-= v1.1.69 =
-*Release Date - 2018-03-08*
-
-* Fixed alignment issue in the featured posts area
- 
-= v1.1.68 =
-*Release Date - 2018-03-07*
-
-* Fixed compatibility issues with WooCommerce 3.3 thumbnail cropping options
- 
-= v1.1.67 =
-*Release Date - 2018-03-06*
-
-* NEW Featured posts area section on the blog
-* Fixed compatibility issues with WooCommerce 3.3 thumbnail cropping options
-* Fixed compatibility issues with WeGlot plugin language switcher
-* Fixed problems with synchronization between the About section and the front page
-* Fixed compatibility with the Invisible reCaptcha plugin
-* [Hestia PRO] Removed constricted video dimensions
-* Made Social Sharing strings translatable
-* Fixed fatal error with PHP 5.2
-* Fixed issue with random images appearing on the blog page in child themes
- 
-= v1.1.66 =
-*Release Date - 2018-02-19*
-
-* Fixed responsive alignment on the shop page
- 
-= v1.1.65 =
-*Release Date - 2018-02-16*
-
-* Fixed compatibility issues with Pirate Forms on mobile
-* Fixed warning appearing in the Blog section
-* [Hestia PRO] Fixed empty cart layout in navigation area
-* Fixed issues with the Header layout control
- 
-= v1.1.63 =
-*Release Date - 2018-02-14*
-
-* [Hestia PRO] Option to open portfolios in a lightbox
-* [Hestia PRO] Added animations for frontpage sections
-* [Hestia PRO] Fixed compatibility issues for the navigation cart with variable products
-* [Hestia PRO] Improved navigation cart layout on mobile devices
-* [Hestia PRO] Allowed some formatting tags in the Slider section buttons
-* New option for choosing the Header area layout
-* [Hestia PRO] Two new layouts for the Header area
-* Small fixes for WooCommerce widgets and product layouts
-* Made entire team member boxes clickable
-* Fixed problem with third level menu items getting hidden when parent menu item had description
-* Fixed alignment problem on IE11 for megamenu
-* Fixed problem with dropdown menu items on Firefox
-* Added styling for more widgets in the Subscribe section
-* Removed characters limitation for WooCommerce product's titles
- 
-= v1.1.62
-*Release Date - 2018-01-31*
-
-* Improved compatibility with WooCommerce 3.3
-* Fixed problem with container width control not working properly
-* Added missing about-contact.png image
-* Fixed warning: Implode function invalid arguments passed
- 
-= v1.1.61 =
-*Release Date - 2018-01-30*
-
-* Fixed problem with dismissable notification
- 
-= v1.1.60 =
-*Release Date - 2018-01-29*
-
-* [Hestia PRO] New option to disable the transparent state of the navigation bar
-* [Hestia PRO] New option for changing the color in the hover state of the navigation bar items
-* [Hestia PRO] New Category select option for the Blog frontpage section
-* [Hestia PRO] Fix video header overflowing body
-* New Font size controls for Frontpage sections
-* Improved migration function from the old font size controls
-* Added hooks for the Clients Bar and Ribbon sections
-* Fixed problems with navigation color options for drop-down menus
-* Basic enhancements to the editor area
-* Small layout fixes for WooCommerce pages
-* Fixed synchronization function for the About frontpage section image and content
-* Optimize theme for a smaller size archive
-* Improved compatibility with Pirate Forms plugin
-* Made footer stick to the bottom of the pages no matter the content size
-* Customizer selective refresh UX changes
-* Added a filter to allow using the product featured image as header image on product pages using this document http://docs.themeisle.com/article/814-how-to-display-the-product-image-in-the-header-of-the-single-product-page-in-hestia
-* Fixed problem with Yoast SEO meta title showing on the Blog page
-* Fixed front page sections problem with alt tags for attached images
-* New hook added to allow a title and subtitle in the Clients Bar section using this doc http://docs.themeisle.com/article/816-how-to-add-a-title-and-a-subtitle-in-the-clients-bar-section-in-hestia
-* Fixed mobile issue with the logo on iOS devices
-* Other small code improvements
- 
-= v1.1.59 =
-*Release Date - 2018-01-11*
-
-* NEW option to enable the main Header Image on all posts and pages, instead of the featured images
-* NEW option for selecting posts and pages individual layouts
-* Fixed problem with font sizes for paragraphs and headings not changing in Elementor
-* [Hestia PRO] Fixed compatibility issue with Elementor and the Full-screen menu Customize option
-* Improved font size migration function to better match the initial values
-* Replaced the featured image in the header with the category image for Single Product Pages
-* Added missing alt tag to the logo element
-* Improved selective refresh for all Customize options
-* [Hestia PRO] Improved the Blog Layout and Footer Layout controls
-* Fixed issue with About section background causing slow scrolling on iOS devices
-* Limit the number of categories, title and description's words for each WooCommerce Product box for a better layout across the site, using filters that can be further used in child themes
-* Two new filters to allow users changing the post meta data on single post pages and on the blog using this documentation http://docs.themeisle.com/article/807-how-to-change-post-meta-data-in-hestia
- 
-= v1.1.58 =
-*Release Date - 2017-12-29*
-
-* Improved migration from old Font Size options to the new options
-* Imported theme mods when switching from a Themeisle child theme to Hestia
- 
-= v1.1.57 =
-*Release Date - 2017-12-25*
-
-* Redone Font Size options. Added controls for Posts & Pages Title, Heading and Content
-* [Hestia PRO] New control for changing the Menu font size
-* Improved default font sizes to better suit mobile devices
-* [Hestia PRO] Added Code Editor and linting to Hestia PRO Hooks Page
-* Fixed H2 tags not displaying on the Frontpage Shop Section
-* Fixed conflict with Event Espresso Calendar addon
-* Minified images
- 
-= v1.1.56 =
-*Release Date - 2017-11-28*
-
-* Added back titles on pages when WooCoomerce is not installed
- 
-= v1.1.55 =
-*Release Date - 2017-11-27*
-
-* [New Feature] Scroll to top option
-* [New Feature] Search icon in the navigation menu
-* Fixed issue with primary menu items not visible on iPads
-* [Hestia PRO] Fixed issue with the footer widgets layout
-* Fixed issue with Team member section not opening external links in a new tab
-* [Hestia PRO] Fixed issue with navbar background color on mobile devices
-* [Hestia PRO] Fixed issue with navigation menu ( with the Full menu option activated ) closing button color
-* Improved layout for the WooCommerce Cart and Checkout pages
-* Fixed alignment issues with the front page sections
- 
-= v1.1.54 =
-*Release Date - 2017-11-13*
-
-* Updated resources for bundled images
-* Removed duplicated featured images on single portfolio pages
-* Added missing IDs for Ribbon and Clients Bar sections
-* Fixed issue with hidden label for the custom color controls in customizer in WordPress 4.9
-* Allow Skip logo cropping
- 
-= v1.1.53 =
-*Release Date - 2017-11-06*
-
-* [Hestia PRO] NEW Video background option in the header area
-* [Hestia PRO] NEW Container width option
-* [Hestia PRO] New option for changing the Header Gradient color
-* Fixed compatibility issues with SiteOrigin Page Builder overriding the About section
-* Fixed WooCommerce layout for single product pages when no tabs were displayed
- 
-= v1.1.52 =
-*Release Date - 2017-10-24*
-
-* Fixed problem with parallax effect in the Ribbon section on iOS
-* New filter for the header background wrapper to be used in a child theme, to allow users to have a featured image for each category - http://docs.themeisle.com/article/706-how-to-use-categories-featured-images-as-header-image-in-hestia
-* Fixed vertical alignment issue on frontpage Products section
-* Fixed compatibility responsive issues with Pirate Forms
-* Fixed callback function used for the custom logo
-* Fixed issue with items descriptions appearing in the primary menu
-* Fixed active buttons color issue in the primary menu
-* Fixed small JavaScript console error in Customizer
- 
-= v1.1.51 =
-*Release Date - 2017-10-18*
-
-* [Hestia PRO] New cart icon in the primary menu when WooCommerce is used
-* Improved migration compatibility from Zerif to Hestia
-* Improved responsive layout
-* Fixed issues with blurred images in the Shop section on mobile
-* Improved frontpage sections hide/show control by adding selective refresh
-* Improved UX for the WYSIWYG control used in the About section
-* Added a basic Mega Menu compatibility - http://docs.themeisle.com/article/704-hestia-basic-mega-menu-setup
-* Integration with PayPal for WooCommerce plugin
-* Integration with MailChimp for WordPress
-* Fixed issues in the Primary menu with active items
-* Fixed small issue with font awesome icons disappearing from the About section content
-* Fixed small issue with selective refresh on Sidebar width option
-* Made all functions in template-tags.php pluggable to allow better child theme usage
-* Made all frontpage sections external links open in a new tab
-* Added some new filters to control the number of items per row appear in the Features, Testimonials and Blog Frontpage section - http://docs.themeisle.com/article/669-how-to-add-4-feature-items-on-a-line-in-hestia
-* Fixed issue in RTL mode with Sidebar layout control icons
-* Fixed selective refresh for the Tagline option
- 
-= v1.1.50 =
-*Release Date - 2017-10-02*
-
-* NEW improved options for frontpage sections ordering/disabling
-* NEW Header Background gradient option
-* NEW default template Page with Sidebar
-* Improved Shop page's layout when using both categories and products
-* Use the blog featured image as header image on that page
-* Migration compatibility from Azera Shop to Hestia
-* Migration compatibility from Parallax One to Hestia
-* Migration compatibility from Llorix One Lite to Hestia
-* Removes generic classes, prefixed with hestia keyword now
-* Improved Customize layout with scrolling to the currently selected section
-* Fixed issue with About section image taking one of the posts images when the sections are subsequent
-* Fixed JS console error sometimes appearing when using cache plugins
- 
-= v1.1.48 =
-*Release Date - 2017-09-19*
-
-* Fixed JS errors that were causing some Elementor pages not to load
-* Reduced the number of placeholder icons in the iconpicker to fix loading issues on some hostings
-* Made external links in the Clients Bar section open in a new tab
-* Fixed selective refresh on frontpage sections titles
-* Fixed problems with WooCommerce elements on RTL sites
-* Fixed small alignment issue with the Slider buttons on responsive mode
-* Fixed small visual bug on the search icon
- 
-= v1.1.47 =
-*Release Date - 2017-09-12*
-
-* New Ribbon section
-* New Clients Bar section
-* [Hestia PRO] New WooCommerce shortcode option in the Frontpage Shop section
-* [Hestia PRO] Fixed issue with Frontpage Features, Team, Testimonials, Contact sections content not translatable with Polylang
-* Fixed Internet Explorer 11 issue with Big Title section button not clickable
-* Fixed Big Title/Slider issue with iframes in Safari
-* Reorganize Customize layout with tabs controls
-* Default WooCommerce image for products with no featured image
-* Made the Very Top Bar fixed at the top of the screen
-* Removed unused jQuery MatchHeight script
- 
-= v1.1.46 =
-*Release Date - 2017-08-24*
-
-* Fixed issue with colors options not appearing in the Features section
-* Fixed issue with the About section not working
-* Recommend Elementor plugin
- 
-= v1.1.45 =
-*Release Date - 2017-08-22*
-
-* Fixed Frontpage sections image options not working properly since the last update
-* Added page title in header for the blog page, instead of the Site tagline
- 
-= v1.1.44 =
-*Release Date - 2017-08-21*
-
-* [Hestia PRO] New option to allow images instead of icons in the Features section
-* New option for layout alignment in the Big title/Slider Section
-* [Hestia PRO] New option for a second button in the Slider Section
-* [Hestia PRO] New color options for buttons in the Slider Section
-* Fixed Typography options on WooCommerce single product pages
-* [Hestia PRO] New panel in admin area for Hooks control
-* Fixed compatibility with Dokan Multivendor Marketplace plugin
-* Fixed compatibility with Nex Forms plugin add-on
-* Fixed issue with dropdown menus overflowing when large items are used in the menu
-* Fixed issue with products gallery on latest WooCommerce update
-* Fixed small responsive issues
-* Added some more hooks for frontpage control
-* Fixed vertical alignment issue with logo on mobile devices
-* Fixed issue with frontpage sections not centering
-* Separate and load CSS conditionally
-* Small changes to Customize layout
-* Changes to enqueue fonts conditionally
-* Changed Font subsets control to a multiple select
-* Removed Menu icon on mobile devices, when no menu is selected
- 
-= v1.1.43 =
-*Release Date - 2017-08-08*
-
-* Fixed issue with colors not working in the Features section
-* Fixed issue with menu opening automatically on mobile devices
-* Fixed issue with footer icons color when the Alternative Footer option is selected
- 
-= v1.1.42 =
-*Release Date - 2017-08-04*
-
-* Fix feature section controls.
-* Fix testimonial section controls. 
-* Fix JetPack compatibility issues in customizer.
-* Fix subscribe section.
-* Improved UX of customizer.
-
-= 1.1.41 =
-*Release Date - 2017-07-28*
-
-* New Top Bar section
-* [Hestia PRO] Top Bar section colors and alignment options
-* New Multiple Header Layouts
-* [Hestia PRO] New Option for a Full width menu in header
-* [Hestia PRO] New Extra Options for Shop section ( category and order filters )
-* New Alternative Footer Style
-* [Hestia PRO] New Option for selecting the number of Footer Widgets Columns
-* Allow HTML tags in Features, Team and Testimonials sections
-* Changed responsive layout of sidebar
-* Fixed Google Webmaster Tools errors
-* Added hooks for header, footer and frontpage sections
-* Improved subtitles spacing on frontpage
-* Fixed some CSS issues in the main navigation menu
-
-= 1.1.39 =
-*Release Date - 2017-07-21*
-
-* Fixed responsive bugs with the main navigation menu
-* Fixed blurred background image bug on about section on iPhone
-* Fixed typography bug with H1 headings not changing size on posts and pages
-* Added support for Snapchat, Email, Tel, Deviantart and Vimeo in the footer social menu
-* Open in a new tab all external links used in Big title section / Slider section
-* Fixed some small layout bug on checkout page for shipping options
-* Compressed image for a smaller archive
-* Smaller size images for Shop and Portfolio sections
-
-= 1.1.38 =
-*Release Date - 2017-07-14*
-
-* New Typography options
-*Style Elementor plugin's widgets
-*Improved all responsive structure
-*Improved compatibility with WooCommerce Germanized plugin
-*Support for hiding Hestia frontpage sections in Elementor
-*Improved cart and checkout layout
-*Fixed issue with Polylang Language switcher HTML tags used as title attribute
-
-= 1.1.37 =
-*Release Date - 2017-06-30*
-
-* New option to allow multiple dropdown levels for the main navigation menu
-* New editor style feature
-* New Shortcodes options for each of the frontpage sections
-* Compatibility with major Form plugins: Contact Form 7, WP forms, Ninja Forms, Formidable Forms, Visual Form Builder, Fast Secure Contact Form, Jetpack Contact form, MailChimp
-* New options for customizing the Footer layout + Support for Socials menu in the footer area
-* Redone some visual elements to better match the Material Design
-* Fixed SEO issue with the meta description on the single post page
-* Allow classes for i html tags in textarea inputs for the frontpage
-* Added versioning for all assets used in the theme
-* Fixed issue with contact form placeholder not working in Mozilla Firefox
-
-= 1.1.33 =
-*Release Date - 2017-06-20*
-
-* Fixed form placeholder issues on Mozilla Firefox
-* Remove support for WPML on frontpage
-
-= 1.1.32 =
-*Release Date - 2017-06-13*
-
-* Updated some strings
-
-= 1.1.31 =
-*Release Date - 2017-06-13*
-
-* New option in Hestia PRO for selecting the sidebar's width
-* Improved layout of cart and checkout pages for WooCommerce
-* Added Install & Activate buttons for the recommended plugins
-* Added selective refresh to all options for better UX
-* Added started content
-* Converted Contact content option from textarea to WYSIWYG
-* Prefixed all generic CSS classes with hestia
-* Fixed issue with inputs of type file beeing not visible in content
-* Removed the sidebar on Cart and Checkout pages
-* Other small CSS improvements
-
-= 1.1.30 =
-*Release Date - 2017-06-07*
-
-* Removed redundant trailingslashit causing warnings
-
-= 1.1.29 =
-*Release Date - 2017-06-07*
-
-* Redid some of the strings used in the theme
-* Recommend BeaverBuilder plugin instead of SiteOrigin Panels
-* Fixed menu dropdown colors
-* Fixed Warning: Cannot modify header information – headers already sent
-
-= 1.1.28 - 2017-06-07*
-
-* Improved theme description and tags
-
-= 1.1.27 =
-*Release Date - 2017-06-06*
-
-* Development
-
-
-= 1.1.25 =
-*Release Date - 2017-06-06*
-
-* Refractor CSS code to SCSS
-* New 'Page Builder Full Width' and 'Page Builder Blank' templates for page builders
-* Compatibility with Elementor plugin
-* Compatibility with Beaver Builder plugin
-* Compatibility with Beaver Themer plugin
-* New WooCommerce sidebar
-* New 'Blog Sidebar Layout' option for changing the layout of the sidebar on blog pages
-* New 'Page Sidebar Layout' option for changing the layout of the sidebar on normal pages
-* Fixed issue with logo size on various dimensions
-* Fixed issue with duplicated Added to cart button on Firefox on frontpage
-* Fixed issue with primary menu active color
-
-= 1.1.24 =
-*Release Date - 2017-05-29*
-
-* Improved primary menu smooth scrolling option
-* Improved search button layout to better match the whole design
-* Improved description and tags
-
-= 1.1.23 =
-*Release Date - 2017-05-25*
-
-* Fixed issues with the WYSIWYG editor in customize
-* Added versioning for scripts and styles to better manage caching
-* Changed upsell mechanism
-* Removed footer layout when no widgets are added there
-
-= 1.1.22 =
-*Release Date - 2017-05-21*
-
-- Added default blog post images for preview
-- Changed the default accent color
-- Changed default Big title/Slider image to match screenshot
-- Changed header height and navbar transparency behaviour
-- Update license for material kit
-
-= 1.1.21 =
-*Release Date - 2017-05-19*
+
+
+= 2.3.9 - 2019-05-27  =
+
+* Fixed issues with redirects to Otter and WPForms dashboards in the onboarding process
+
+
+= 2.3.8 - 2019-05-27  =
+
+* Redone the Last item in menu control to accommodate more items
+* Accessibility fixes
+* Improved footer widgets logic to better accommodate the footer builder
+* Exclusive Products section layout improvements
+* WooCommerce buttons enhancements
+* New hooks added
+
+
+= 2.3.7 - 2019-05-07  =
+
+* New Margin and Padding controls for each header builder component
+* Reorganized layout for the header/footer builder using tabs
+* Option for the mobile menu to slide from the left side or dropdown toggle
+* Basic compatibility with LifterLMS plugin
+* New Exclusive Products section on single product pages
+* Added animations to the main Gutenberg starter site
+* Updates for the Doctors, Restaurant, Vet Center starter sites
+* Updates for the latest version of Otter Blocks
+
+
+= 2.3.6 - 2019-04-22  =
+
+* Fixed primary menu in AMP mode
+* Notice for Otter Blocks for WordPress 5 users
+* Fixed vertical alignment in IE
+* Remove title appearing in the navigation cart in the latest update of WooCommerce
+* Updated the component alignment control in the header/footer builder
+
+
+= 2.3.5 - 2019-04-15  =
+
+* Fixed header HTML component stripping HTML code
+* Fixed Jetpack's comment form layout issue
+* Fixed dropdown menu not working in Microsoft Edge
+* Fixed main content shifted to the right in IE11
+* Fixed migration from Zelle
+* Fixed audio block not displaying in Chrome
+* Fixed compatibility with Elementor Pro Theme Locations API
+* Added new wp_body_open() function for WP 5.2
+* Replaced neve icons with SVGs for a better loading time
+* New Shop starter site
+
+
+= 2.3.4 - 2019-04-05  =
+
+* Removed unused strings
+
+
+= 2.3.3 - 2019-04-05  =
+
+* Fixed AMP issues with the header footer builder
+* Smaller header spacing on mobile devices
+* Fixed toggle button layout on WooCommerce pages
+
+
+= 2.3.2 - 2019-04-05  =
+
+* Header footer builder fixed sanitization
+
+
+= 2.3.1 - 2019-04-05  =
+
+* Fixed missing sanitization functions
+* Fixed Gutenberg integration with the typography options
+
+
+= 2.3.0 - 2019-04-04  =
+
+* NEW Header/Footer builder
+* Compatibility with the Header, Footer & Blocks for Elementor plugin
+* New option to allow disabling of the custom Gutenberg integration
+* Updated the tag list with the newly added tags
+
+
+= 2.2.0 - 2019-03-18  =
+
+* New Original starter site created in the new Gutenberg editor for WordPress 5 users
+* Improved onboarding page layout
+* Compatibility with the Neve Hooks plugin
+* WPML compatibility
+* Update Contact us with the correct link
+
+
+= 2.1.0 - 2019-03-07  =
+
+* Two newly added Elementor Starter Sites
+* Small updates to the Starter Sites library
+* Improved WooCommerce page layouts
+* Improved onboarding page layout
+* Fixed issue with .aligncenter class not working properly
+* Fixed issue with sidebar not aligned properly on Safari 10
+* Fixed SSL issue for generated stylesheets
+
+
+= 2.0.0 - 2019-02-26  =
+
+* Refactor the code to allow child themes to override the views folder - https://docs.themeisle.com/article/985-how-to-create-a-child-theme-for-neve
+* Updated the onboarding notice to provide more information
+* Fixed issue with the image source for the Video block for Otter
+* Updated starter sites to use Anchor widgets
+
+
+= 1.1.4 - 2019-02-08  =
+
+* Fixed alignment issues with the Gallery widget
+
+
+= 1.1.3 - 2019-02-07  =
+
+* Fixed list styling in Elementor
+
+
+= 1.1.2 - 2019-02-07  =
+
+* New Gutenberg Blocks added for Otter
+* Fixed lists styling
+* Fixed issue with Gutenberg Blocks images not visible in an online environment
+
+
+= 1.1.1 - 2019-02-04  =
+
+* Fixed issue with content missing on the single post page
+* Fixed issue with the Footer Gutenberg block for Otter
+* Improved the Neve Energy Panel starter site
+
+
+= 1.1.0 - 2019-01-31  =
+
+* NEW Neve Specific Gutenberg blocks for Otter Blocks
+* NEW Posts navigation control
+* Display category description of categories archive pages
+* Fixed issue with the Neve Restaurant starter site not importing in some cases
+* Fixed issue with the starter sites not importing when Jetpack is installed
+* Fixed issue with scrolling not working on mobile devices for anchored links
+* Fixed issue with lists not displaying properly in Elementor
+* Fixed fatal error for lower PHP versions
+
+
+= 1.0.29 - 2019-01-21  =
+
+* Improved the onboarding process
+* Fixed issue with the read more button not appearing for the articles using the read more tag
+* Recommend the WeGlot plugin
+
+
+= 1.0.28 - 2019-01-15  =
+
+* Layout updates for the starter sites
+* Improved layout of the onboarding notice
+* Fixed style issues for the select elements
+
+
+= 1.0.27 - 2019-01-09  =
+
+* Review the theme to make it Accessibility-ready
+* Improved performance for the .alignfull and .alignwide classes in the new WordPress editor
+* Fixed alignment of the Polylang language switcher in the navigation menu
+* Optimized images used in the Neve starter site
+* Fixed compatibility with the Lazy Load plugin duplicating images
+
+
+= 1.0.26 - 2018-12-17  =
+
+* Fixed issues in IE with the Neve 2018 Site
+* Fixed issues in AMP with the navigation menu
+
+
+= 1.0.25 - 2018-12-14  =
+
+* Optimized images for Neve demo and fixed issue with IE
+* Fixed issue with primary navigation menu in IE
+* Fixed issue with date format in languages different than English
+
+
+= 1.0.24 - 2018-12-14  =
+
+* Fixed problems with logo and blog images on AMP
+* Fixed problem with the autoloader on specific servers
+
+
+= 1.0.23 - 2018-12-13  =
+
+* Fixed style layout for the pullquote Gutenberg block
+* Fixed AMP errors
+
+
+= 1.0.22 - 2018-12-10  =
+
+* Fixed alt attribute for the author gravatar image
+* Improved My Account page layout
+* Small fixes for the Gutenberg default blocks
+
+
+= 1.0.21 - 2018-12-07  =
+
+* Styled basic Gutenberg blocks
+* Fixed issue with the search input icon
+
+
+= 1.0.20 - 2018-12-05  =
+
+* New Neve Charity demo
+* Updated the text for the upgrade PHP notice
+* Style spacing on the checkout page
+* Added color for the current menu item in the primary menu
+* Fixed menu anchors in the Neve demos
+
+
+= 1.0.19 - 2018-12-03  =
+
+* Hide menu cart icon on the Cart page
+* Improved code usability
+* Fixed issues with the metabox on the Blog page not working
+
+
+= 1.0.18 - 2018-11-29  =
+
+* Fixed issue with Gutenberg columns width
+* Fixed issues with the content width option
+* Refactor the menu class
+* Updated theme copyright
+* Recommend Otter Blocks plugin
+* Added Last menu items options to the fallback primary menu
+
+
+= 1.0.16 - 2018-11-27  =
+
+* New Neve Restaurant demo
+* Fixed default value for the footer copyright
+
+
+= 1.0.15 - 2018-11-23  =
+
+* Fixed issue with thumbnail hiding on single post page
+
+
+= 1.0.14 - 2018-11-23  =
+
+* Fixed container width in Gutenberg
+
+
+= 1.0.13 - 2018-11-23  =
 
 * Fixed escaping issues
-* Changed defaults for some titles and subtitles
-* Added selective refresh for some theme mods
+* Changed Gutenberg font size controls
 
-= 1.1.20 =
-*Release Date - 2017-05-16*
 
-* Fixed prefixing issues
-* Added registering function for default headers
-* Loading main style file through get_stylesheet_uri()
-* Fixed small escaping issues
+= 1.0.12 - 2018-11-22  =
 
-= 1.1.19 =
-*Release Date - 2017-05-11*
+* Fixed content width and sidebar background on mobile
 
-* Import content for users coming from Zerif
-* Allow basic HTML formatting tags in repeater textarea
-* Fixed issue with colors selection in child themes
-* Added About Hestia page
 
-= 1.1.17 =
-*Release Date - 2017-04-21*
+= 1.0.11 - 2018-11-22  =
 
-* Update font-awesome library
-* Allow HTML tags in the slider section and in the Big title section
+* Fixed issue with the content width option not updating correctly
 
-= 1.1.16 =
-*Release Date - 12/04/2017-04-12*
 
-* Replaced screenshot
-* Fixed thumbnails issues with WooCommerce 3.0.0
-* Fixed jquery-ui dependency causing scripts not to load
+= 1.0.10 - 2018-11-22  =
 
-= 1.1.15 =
-*Release Date - 2017-04-06*
+* Gutenberg integration
+* New options for controling the content width and sidebar layout of pages from customizer and individual metabox
+* Disable compatibility with AMP version lower than 1.0.0 where paired mode is added
+* Improved Neve Options page layout
+* New Neve Lawyers demo
+* New Neve Doctors demo
 
-* Fixed grund and fatal error when woocoommerce is not installed
 
-= 1.1.14 =
-*Release Date - 2017-04-06*
-
-* Fixed compatibility issues with WooCommerce 3.0.0
-* Fixed issues with shortcodes and scripts entered in the About section
-
-= 1.1.13 =
-*Release Date - 2017-04-05*
-
-* Fixed issue with shortcodes used in the About section causing Customizer to not load
-* Fixed repeater using 'file_get_contents' function.
-
-= 1.1.12 =
-*Release Date - 2017-03-31*
-
-* Fixed compatibility issue with Elementor page builder plugin
-
-= 1.1.11 =
-*Release Date - 2017-03-28*
-
-* Fixed loading time issue in Mozilla Firefox
-* Fixed small layout issues
-* Refractor code
-* Improved escaping
-
-= 1.1.9 =
-*Release Date - 2017-03-13*
-
-* Fixed default cases for frontpage sections controls
-
-= 1.1.8 =
-*Release Date - 2017-03-13*
-
-* Created Hestia Companion plugin for lite users
-* Fixed pricing display issue on frontpage for WooCommerce products
-* Fixed layout issues with ul and ol lists
-* Added starter content for new users
-
-= 1.1.7 =
-*Release Date - 2017-03-02*
-
-* Fixed issue with the sidebar position when only logged in users are able to posts comments
-* Fixed issue with translations in the Pricing section
-
-= 1.1.6 =
-*Release Date - 2017-02-23*
-
-* Solved comment form issue.
-
-= 1.1.5 =
-*Release Date - 2017-02-09*
-
-* Make theme compatible with WPML and Polylang
-* Improved Customize upsell layout
-
-= 1.1.4 =
-*Release Date - 2017-01-25*
-
-* Use correct instructions for Sendinblue widget
-* Changed slider speed from 400 seconds to 10 seconds
-* Adjusted padding on menu items to match material kit pro
-
-= 1.1.3 =
-*Release Date - 2017-01-16*
-
-* Fixed issue with submit button not centering on full width pages using Pirate Forms
-* Added synchronized controls in the About section to allow customization
-* Fixed issue with hover color for menu items
-* Changed the way style.css is enqueued for child theme compatibility
-
-= 1.1.2 =
-*Release Date - 2016-12-14*
-
-* Reorganize theme files
-* Remove unused image
-* Fixed issue with sticky post layout
-
-= 1.1.1 =
-*Release Date - 2016-11-26*
-
-* Removed unnecessary .pot file
-* Fixed data validation and sanitization issues
-
-= 1.1.0 =
-*Release Date - 2016-11-24*
-
-* Fixed WooCommerce responsive issues
 
 = 1.0.9 =
-*Release Date - 2016-11-24*
 
-* Fixed text colors in the Contact section
+* AMP integration
+* Accessibility ready
+* New color options to better fit themes options
+* New options to allow reordering the elements on the single post pages
+* New individual options to allow disabling specific elements on single posts/pages
+* Basic Mega Menu integration
+* Improved the onboarding process alongside the import from Zelle
+* Improved navigation layout
+* Improved comments area style
+* Improved WooCommerce layout
+* Other small design improvements
+* Added fallback menu for the primary menu
 
 = 1.0.8 =
-*Release Date - 2016-11-24*
-
-* Fixed layout for the cart button
-* Fixed responsive issues
-* Fixed themecheck errors
-* Replaced screenshot
-* Improved sticky posts style
-* Improved contrast on frontpage sections
-* Improved padding and margin issues
+* Google Search Console compatibility
+* Fixed theme check issues
+* Changed the onboarding mechanism
+* Fixed escaping issues
 
 = 1.0.7 =
-*Release Date - 2016-11-18*
-
-* Fixed footer widgets color
-* Fixed sections order with WordPress 4.7
-* Updated travis and fixed grunt errors
-* Fixed theme check errors
-* Display the content on frontpage
-
-= 1.0.6 =
-*Release Date - 2016-10-28*
-
-* Improved colors options in customizer
-* Compatibilty with the plugin YITH Woocommerce Zoom Magnifier
-* Style attachment page
-* Change default images ( compresed )
-* Fixed responsive issues
-
-= 1.0.5 =
-*Release Date - 2016-10-25*
-
-* Update readme file
-* Fixed WooCommerce issues
-* Fixed section ordering on internal pages
-
-= 1.0.4 =
-*Release Date - 2016-10-24*
-
-* Improved sections order control
-* Added hover effects on comments form/subscribe form
-* Added show/hide controls for each section
-* Allow html tags in the contact section
+* Accessibility ready
+* Refactored the About Neve page
+* Design improvements
+* Import Zelle ( Zerif ) options if the theme was previously activated
+* Remove tags on the archives page header
+* Compatibility with Beaver Themer plugin
+* Compatibility with Gutenberg
+* Updated the readme file
 
 = 1.0.3 =
-*Release Date - 2016-10-21*
+* Release Date - 2018-09-24*
+* Add proper Elementor Header and Footer support
+* Fixed warning caused by forgotten "var_dump" in page / post metabox handler
 
-* Fixed issue with sections management
-* Added style for the sidebar
-* Small improvements in layout
-
-
-= 1.0.2 =
-*Release Date - 2016-10-20*
-
-* Added support for Jetpack portfolio
-* Improved WooCommerce implementation
-* Section Order
-* Fixed small layout issues
+= v1.0.2 =
+* Release Date - 2018-09-07*
+* Demo data for Neve 2018 template
 
 = 1.0.1 =
-*Release Date - 2016-10-18*
-
-* Alternative blog template
-* Improved layout style
-* Added option for sidebar on blog posts
-* Optimize the main menu
-* Improved WooCommerce layout
-* Added grunt + fix all grunt errors
-
+* Release Date - 2018-09-07*
+* Updated description and screenshot
 
 = 1.0.0 =
-*Release Date - 2016-10-03*
+* Release Date - 2018-09-06*
+* Lowercase file names.
 
-- First version
 
 == Resources ==
-= Libraries =
+* Neve Icons based on Font Awesome Icons licensed under CC BY 4.0 License (https://creativecommons.org/licenses/by/4.0/).
 
-* wp_bootstrap_navwalker, https://github.com/twittem/wp-bootstrap-navwalker
-* Copyright 2014 Twitter, Edward McIntyre, GPL-2.0+, http://www.gnu.org/licenses/gpl-2.0.txt
-
-* Bootstrap, http://getbootstrap.com/
-* Copyright 2011-2015 Twitter, Inc, MIT License, http://www.opensource.org/licenses/MIT
-
-* FontAwesome, http://fontawesome.io/
-* Copyright 2015, Dave Gandy,
-* Font Awesome licensed under SIL OFL 1.1, http://scripts.sil.org/OFL
-* Code licensed under MIT License, http://www.opensource.org/licenses/MIT
-* Documentation licensed under CC BY 3.0, http://creativecommons.org/licenses/by/3.0/
-
-* Copyright 2014, liabru, MIT License, http://www.opensource.org/licenses/MIT
-
-* Hammer.js, https://hammerjs.github.io/
-* Copyright 2011-2017, Jorik Tangelder (Eight Media), MIT License, http://www.opensource.org/licenses/MIT
-
-* Animate on scroll.js, https://hammerjs.github.io/
-* Copyright (c) 2015 Michał Sajnóg, MIT License, http://www.opensource.org/licenses/MIT
-
-* WordPress Plugin Boilerplate, https://github.com/DevinVinson/WordPress-Plugin-Boilerplate
-* Copyright (C) 1989, 1991 Free Software Foundation, GPL-2.0
-
-* Parallax.js, https://github.com/wagerfield/parallax
-* Matthew Wagerfield, René Roth, MIT License, http://www.opensource.org/licenses/MIT
-
-= Images =
-
-
-* Hestia: 1.jpg, CC0, https://mystock.themeisle.com/photo/girl/
-* Hestia: 2.jpg, CC0, https://mystock.themeisle.com/photo/winter-hat/
-
-* Hestia Default: tropical-beach, CC0, https://mystock.themeisle.com/photo/tropical-beach/
-
-
-All images are licensed under CC0.
+All  images are licensed under CC0.
 
 Screenshot resources:
 
-* https://mystock.themeisle.com/photo/mountain/
+* https://www.pexels.com/photo/landscape-photography-of-mountains-covered-in-snow-691668/
 
 Starter Sites screenshots resources:
 
-WooCommerce
+- Original
+* http://mystock.themeisle.com/photo/statue-2/
+* https://mystock.themeisle.com/photo/path/
 
-* https://mystock.themeisle.com/photo/sunflower/
-* https://mystock.themeisle.com/photo/flower/
-* https://mystock.themeisle.com/photo/blooming-bougainvillea-flowers/
-* https://mystock.themeisle.com/photo/flower-buds/
-* https://mystock.themeisle.com/photo/rock-flowers/
-* https://mystock.themeisle.com/photo/mountain-flowers/
-* http://mystock.themeisle.com/photo/lilac/
+- Restaurant
+* https://stocksnap.io/photo/3IRQDGCL7J
+* https://stocksnap.io/photo/ZPMWWMHBDE
+* https://stocksnap.io/photo/2HEQC6X2DF
 
-Energy Panels
+- Charity
+* https://stocksnap.io/photo/AEENLCARXY
 
-* https://stocksnap.io/photo/J5Z48RFO76
-* https://stocksnap.io/photo/QEUHCFGQNP
-* https://stocksnap.io/photo/WVKCUPH3RC
-* https://stocksnap.io/photo/KAUFJW1PEQ
+- Vet Center
+* https://mystock.themeisle.com/photo/street-dog-sitting-on-a-beach/
+* https://mystock.themeisle.com/photo/dog-4/
 
-Vet Center
-
+- Doctors
 * https://stocksnap.io/photo/GSBJXWRSDV
 
-Agency Travel
+- Energy Panels
+* http://mystock.themeisle.com/photo/sunny-rome/
+* http://mystock.themeisle.com/photo/tour-eiffel/
 
+- Lawyers
+* http://mystock.themeisle.com/photo/architecture-3/
+* http://mystock.themeisle.com/photo/architecture-2/
+
+- Freelancer
+* http://mystock.themeisle.com/photo/programming-laptop/
+* http://mystock.themeisle.com/photo/code-in-wp/
+
+- Shop
+* https://stocksnap.io/photo/SS2GVMJTWH
+* https://stocksnap.io/photo/KQECHSBAOC
+* https://stocksnap.io/photo/1CXI0CSPE5
+* https://stocksnap.io/photo/JBCWCLO4JI
+* https://stocksnap.io/photo/AEENLCARXY
+
+- Travel Agency
 * https://mystock.themeisle.com/photo/amsterdam/
 
-Lawyers
+- Coffee Shop
+* https://stocksnap.io/photo/HOHJK6B7TD
+* https://stocksnap.io/photo/DTKOOFPC06
 
-* https://mystock.themeisle.com/photo/liberty-in-shadow/
+- Constructions
+* https://stocksnap.io/photo/T78VYSKHFS
+* https://stocksnap.io/photo/ZWTCO4R3G6
+* https://stocksnap.io/photo/6EAB6C3900
+* https://stocksnap.io/photo/BZ4FJO6KZE
+
+- Showcase
+* http://mystock.themeisle.com/photo/mountain/
+* http://mystock.themeisle.com/photo/mountain-at-sunset/
+* http://mystock.themeisle.com/photo/forest-landscape/
+
+- Business Consulting
+* http://mystock.themeisle.com/photo/photographer-2/
+* http://mystock.themeisle.com/photo/cameras/
+
+- Architecture
+* http://mystock.themeisle.com/photo/wind/
+* http://mystock.themeisle.com/photo/architectural-ceiling/
+* http://mystock.themeisle.com/photo/glass-building/
+* http://mystock.themeisle.com/photo/city-view/
+* http://mystock.themeisle.com/photo/trump-tower/
+* http://mystock.themeisle.com/photo/white-building/
+
+- Fashion
+* https://stocksnap.io/photo/K00RNBNJGC
+* https://stocksnap.io/photo/TFK0XBHMRE
+* https://stocksnap.io/photo/BRDLQ22VO4
+* https://stocksnap.io/photo/HZBJUNAK7H
+* https://stocksnap.io/photo/Y7WNWJC6NA
+
+- Fitness
+* https://stocksnap.io/photo/M5791YB6J9
+* https://stocksnap.io/photo/SRWV8BAHE6
+
+- Vacation Rental
+* http://mystock.themeisle.com/photo/pool/
+
+- Music Band
+* https://stocksnap.io/photo/G22LER7CJQ
+* https://stocksnap.io/photo/E9E65D3D04
+* https://stocksnap.io/photo/V2TT0P34KE
+* https://stocksnap.io/photo/BG80NXTTHY
+* https://stocksnap.io/photo/NV1FLKIE9U
+* https://stocksnap.io/photo/IUFVZUDPO5
+
+- Wedding
+* https://stocksnap.io/photo/3RI84R6CYH
+* https://stocksnap.io/photo/GEVAEIZQH1
+* https://stocksnap.io/photo/UXZ782X55D
+
+- TheMotion
+* http://mystock.themeisle.com/photo/code-in-wp/
+* http://mystock.themeisle.com/photo/empty-beach-2/
+* http://mystock.themeisle.com/photo/traffic-sign/
+* http://mystock.themeisle.com/photo/android/
+
+- Life Coach
+* http://mystock.themeisle.com/photo/city-park-night/
+* http://mystock.themeisle.com/photo/temple-2/
+
+- Tattoo
+* http://mystock.themeisle.com/photo/unconventional-store-with-unicorn-in-the-window/
+* http://mystock.themeisle.com/photo/street-at-night/
+
+- Job Listing
+* http://mystock.themeisle.com/photo/registration/
+* http://mystock.themeisle.com/photo/stockholm-street/
+
+- Barber Shop
+* https://stocksnap.io/photo/R9YRHH2JQY
+* http://mystock.themeisle.com/photo/fancy-restaurant/
+
+- Personal Trainer
+* http://mystock.themeisle.com/photo/street-vendor-selling-fruits-on-his-fruit-cart/
+* http://mystock.themeisle.com/photo/yoga-2/
+* http://mystock.themeisle.com/photo/mac-and-cheese-pizza/
+* http://mystock.themeisle.com/photo/hotel-with-terrace-on-the-sea/
+* http://mystock.themeisle.com/photo/indian-restaurant-dishes/
+
+- Creative Portfolio
+* http://mystock.themeisle.com/photo/rocking-chair-on-a-blue-carpet/
+* http://mystock.themeisle.com/photo/vintage-framed-photo-of-desserts/
+* http://mystock.themeisle.com/photo/bathtub-in-the-center-of-the-room/
+* http://mystock.themeisle.com/photo/registration/
+* http://mystock.themeisle.com/photo/big-ben/
+* http://mystock.themeisle.com/photo/glass-building/
+
+- Real Estate
+* http://mystock.themeisle.com/photo/city/
+* http://mystock.themeisle.com/photo/glass-building-2/
+
+- Events
+* http://mystock.themeisle.com/photo/young-boy-attending-a-concert/
+* http://mystock.themeisle.com/photo/performing-artist-with-cool-projections-behind/
+* http://mystock.themeisle.com/photo/drummer-plays-drums-kit/
+* http://mystock.themeisle.com/photo/concert/
+* http://mystock.themeisle.com/photo/rock-on/
+
+- Wedding Photography
+* http://mystock.themeisle.com/photo/wedding-flower-decorations/
+* http://mystock.themeisle.com/photo/bride-and-groom-table-decorated-with-flowers-2/
+* http://mystock.themeisle.com/photo/bride-and-groom/
+
+- Photography Studio
+* https://stocksnap.io/photo/3IJLXXN9OY
+* https://stocksnap.io/photo/83PSG6Y1FM
+
+- Video Agency
+* http://mystock.themeisle.com/photo/cameras/
+* http://mystock.themeisle.com/photo/protest/
+* http://mystock.themeisle.com/photo/selfie/
+* http://mystock.themeisle.com/photo/flatiron-2/
+
+- Furniture Shop
+* http://mystock.themeisle.com/photo/bathtub-in-the-center-of-the-room/
+* http://mystock.themeisle.com/photo/resort-premium-room/
+* http://mystock.themeisle.com/photo/rocking-chair-on-a-blue-carpet/
+* http://mystock.themeisle.com/photo/resort-room-with-a-view/
+* http://mystock.themeisle.com/photo/couch-with-two-green-pillows/
+
+- Farm
+* http://mystock.themeisle.com/photo/yellow-and-green/
+* http://mystock.themeisle.com/photo/oranges/
+* http://mystock.themeisle.com/photo/swamp/
+* http://mystock.themeisle.com/photo/strawberries-and-oranges-for-sale-in-baskets/
+* http://mystock.themeisle.com/photo/rosehip/
+
+- Photographer
+* http://mystock.themeisle.com/photo/old-casino/
+* http://mystock.themeisle.com/photo/photographer-3/
+* http://mystock.themeisle.com/photo/sea-breeze/
+* http://mystock.themeisle.com/photo/church/
+* http://mystock.themeisle.com/photo/flatiron-2/
+
+- Kindergarten
+* https://stocksnap.io/photo/NY963ZH6T2
+* https://stocksnap.io/photo/PBHFF6RJPH
+
+- Florist
+* https://stocksnap.io/photo/01SN8V4M9O
+* http://mystock.themeisle.com/photo/wedding-bouquet/
+* http://mystock.themeisle.com/photo/wedding-flower-decorations/
+
+- Cake Shop
+* https://stocksnap.io/photo/F6DNP46F78
+* https://stocksnap.io/photo/7G24TFZEKU
+
+- Transport
+* http://mystock.themeisle.com/photo/docks/
+* http://mystock.themeisle.com/photo/industrial-boat/
+
+- eBook
+* http://mystock.themeisle.com/photo/the-statue-of-liberty-at-sunset/
+* http://mystock.themeisle.com/photo/brasov-old-city/
+* http://mystock.themeisle.com/photo/mysterious-man-2/
+
+- Speed
+* http://mystock.themeisle.com/photo/couch-with-two-green-pillows/
+* http://mystock.themeisle.com/photo/mannequin/
+* http://mystock.themeisle.com/photo/grooms-suite/
+* http://mystock.themeisle.com/photo/luggage-tag-label-on-suitcase-or-bag-with-the-sea-behind-it/
+
+- Food Magazine
+* https://mystock.themeisle.com/photo/caesar-salad/
+* https://mystock.themeisle.com/photo/indian-restaurant-dishes/
+* https://mystock.themeisle.com/photo/mac-and-cheese-pizza/
+* https://mystock.themeisle.com/photo/delicious-morning-breakfast-served-on-a-tray/
+
+- Web Design
+* https://mystock.themeisle.com/photo/programming-laptop/
+* https://mystock.themeisle.com/photo/ipad/
+
+- Yoga Studio
+* https://stocksnap.io/photo/OYD9ZOOCCQ
+* https://stocksnap.io/photo/TL7LKEE0HR
+* https://stocksnap.io/photo/W23EUNXBCG
+* https://stocksnap.io/photo/MM6OVJGYRU
+* https://mystock.themeisle.com/photo/floor-pattern/
+
+- Sales Funnel
+* https://mystock.themeisle.com/photo/cityscape-of-new-york-2/
+
+- Church
+* https://mystock.themeisle.com/photo/vatican-streets/
+* https://stocksnap.io/photo/M2XAYFTTEN
+* https://stocksnap.io/photo/MOUVID40QD
+* https://stocksnap.io/photo/AM7OQR2274
+
+- Fashion Magazine
+* https://stocksnap.io/photo/F08ZV0M412
+* https://stocksnap.io/photo/V5A73VEOJO
+* https://stocksnap.io/photo/AOOC3CJARN
+* https://stocksnap.io/photo/HKTKMOVXNO
+
+- Winery
+* https://stocksnap.io/photo/CM4WVU6WO0
+
+- News Magazine
+* https://mystock.themeisle.com/photo/man-sitting-under-a-tree/
+* https://mystock.themeisle.com/photo/smartphone/
+* https://mystock.themeisle.com/photo/protest/
+* https://mystock.themeisle.com/photo/indian-food-bhel-puri-2/
+* https://mystock.themeisle.com/photo/skiers/
+* https://mystock.themeisle.com/photo/new-york-skyscrapers-on-a-cloudy-wheather/
+* https://mystock.themeisle.com/photo/metropolitan-museum/
+
+- Coworking
+* https://mystock.themeisle.com/photo/hotel-lobby/
+* https://mystock.themeisle.com/photo/code-in-wp/
+
+- Fishing
+* https://mystock.themeisle.com/photo/boat-on-a-volcanic-green-lake-surrounded-of-a-forest-2/
+
+- Car Rental
+* https://stocksnap.io/photo/5XRZI55HKV
+* https://stocksnap.io/photo/Q1KQCULDV5
+* https://stocksnap.io/photo/OYLXO1QZ5K
+
+- Ski Resort
+* https://stocksnap.io/photo/Z5WEX57EKA
+* https://mystock.themeisle.com/photo/mountain/
+* https://mystock.themeisle.com/photo/gondola-2/
+* https://stocksnap.io/photo/QT3VEK73I5
+* https://stocksnap.io/photo/JJE5DPU0U9
+* https://stocksnap.io/photo/KRXK7LH6XL
+
+- Digital Product
+* https://mystock.themeisle.com/photo/cityscape-of-new-york-2/
+
+- Moving Company
+* https://stocksnap.io/photo/YF3WGBL0AK
+
+- Translation Services
+* https://mystock.themeisle.com/photo/metropolitan-museum/
+
+- Blogger
+* https://mystock.themeisle.com/photo/passing-girl/
+
+- Coupons
+* https://mystock.themeisle.com/photo/gift-shop-in-punjim/
+* https://mystock.themeisle.com/photo/teddy/
+* https://mystock.themeisle.com/photo/couch-with-two-green-pillows/
+* https://mystock.themeisle.com/photo/luggage-tag-label-on-suitcase-or-bag-with-the-sea-behind-it/
+
+- Escape Room
+* https://mystock.themeisle.com/photo/scary-nymph-group-holding-hands-2/
+* https://mystock.themeisle.com/photo/mannequin/
+* https://mystock.themeisle.com/photo/light-carpet/
+* https://mystock.themeisle.com/photo/mannequin-with-unicorn-mask-standing-in-the-window/
+
+- Resume
+* https://mystock.themeisle.com/photo/programming-laptop-2/
+* https://mystock.themeisle.com/photo/thinking-time/
+
+- Wellness Spa
+* https://mystock.themeisle.com/photo/bathtub-in-the-center-of-the-room/
+* https://mystock.themeisle.com/photo/hotel-with-terrace-on-the-sea/
+* https://mystock.themeisle.com/photo/exotic-beach-in-maldives/
+
+- Courses
+* https://stocksnap.io/photo/SCC00WCQ3I
+* https://mystock.themeisle.com/photo/code-in-wp/
+* https://mystock.themeisle.com/photo/photographer-2/
+* https://mystock.themeisle.com/photo/browser-tabs/
+
+- Fashion Model Agency
+* https://mystock.themeisle.com/photo/thinking-time/
+* https://mystock.themeisle.com/photo/bride-and-groom/
+* https://mystock.themeisle.com/photo/mannequin/
+* https://stocksnap.io/photo/WB9WHQU68Q
+* https://stocksnap.io/photo/F08ZV0M412
+* https://stocksnap.io/photo/Q8FQMQWYKB
+* https://stocksnap.io/photo/D626O6RC44
+
+- IT Technology Agency
+* https://mystock.themeisle.com/photo/programming-laptop-2/
+* https://mystock.themeisle.com/photo/couple-jogging-together-along-the-river-coas/
+* https://mystock.themeisle.com/photo/new-york-skyscrapers-on-a-cloudy-wheather/
+
+- Christmas Market
+* https://stocksnap.io/photo/A8CFE9WADG
+* https://mystock.themeisle.com/photo/young-boy-attending-a-concert/
+* https://mystock.themeisle.com/photo/pool-party/
+
+- Podcast
+* https://mystock.themeisle.com/photo/tour-eiffel/
+* https://mystock.themeisle.com/photo/new-york-skyscrapers-on-a-cloudy-wheather/
+* https://mystock.themeisle.com/photo/harbour-air-seaplanes-docked-in-maldives-2/
+* https://mystock.themeisle.com/photo/fancy-restaurant/
+* https://mystock.themeisle.com/photo/registration/
+
+- Digital Agency
+* https://stocksnap.io/photo/RCFX768X06
+* https://mystock.themeisle.com/photo/bucharest-at-night/
+* https://mystock.themeisle.com/photo/browser-tabs/
+* https://mystock.themeisle.com/photo/code-in-wp/
+* https://mystock.themeisle.com/photo/tourists/
+
+- Industrial
+* https://mystock.themeisle.com/photo/bucharest-at-night/
+* https://mystock.themeisle.com/photo/two-fast-trains-in-a-train-station/
+* https://mystock.themeisle.com/photo/fishing-boats-2/
+* https://mystock.themeisle.com/photo/engine/
+
+- Adventure
+* https://mystock.themeisle.com/photo/mountain/
+* https://mystock.themeisle.com/photo/mountain-path/
+* https://mystock.themeisle.com/photo/skiers/
+* https://mystock.themeisle.com/photo/picnic-2/
+
+- Product Launch
+* https://mystock.themeisle.com/photo/harley-davidson-motorcycle-with-a-field-of-wheat-behind-it-3/
+* https://stocksnap.io/photo/AJAA85Y0SH
+
+- Accounting
+* https://mystock.themeisle.com/photo/shopping-building-in-copenhagen-center/
+
+- Beauty Shop
+* https://stocksnap.io/photo/JVZSMMHS8J
+* https://stocksnap.io/photo/LHMA01FPBE
+* https://stocksnap.io/photo/V2JTH0ST4Y
+* https://stocksnap.io/photo/S6RLOBPAOZ
+
+- Recruitment Agency
+* https://stocksnap.io/photo/GVUWVKUHZE
+
+- Artist
+* https://mystock.themeisle.com/photo/graffiti/
+* https://stocksnap.io/photo/OZCMRCGRX9
+* https://stocksnap.io/photo/1PY0DYZSDT
+
+- VR Studio
+* https://stocksnap.io/photo/PFHFKXTMYD
+* https://mystock.themeisle.com/photo/scale-model-of-a-street/
+
+- Makeup Artist
+* https://stocksnap.io/photo/F08ZV0M412
+* https://stocksnap.io/photo/G40JKFC5I5
+* https://stocksnap.io/photo/SSSLXNZ1RQ
+
+- Web Agency
+* https://www.pexels.com/photo/landscape-photography-of-mountains-covered-in-snow-691668/
+
+- Scuba Diving
+* https://stocksnap.io/photo/1S3SUI4VRD
+* https://mystock.themeisle.com/photo/group-of-fish-swimming-in-crystal-clear-water/
+
+- Wine Bar
+* https://stocksnap.io/photo/VXU7CK0T65
+
+- Mountain Biking Race
+* https://stocksnap.io/photo/U3Z5GNZUQR
+* https://stocksnap.io/photo/SNIKX3KGKD
+
+- Movie
+* https://mystock.themeisle.com/photo/illuminated-alley-of-a-luxurious-resort-at-sunset/
+* https://mystock.themeisle.com/photo/times-square/
+* https://mystock.themeisle.com/photo/bucharest-at-night/
+
+- Running Club
+* https://mystock.themeisle.com/photo/couple-jogging-together-along-the-river-coas/
+* https://stocksnap.io/photo/X1T5YTO2MB
+* https://stocksnap.io/photo/6X9WTXG24A
+* https://stocksnap.io/photo/X2Q7LBUF6U
+
+- Jewellery Shop
+* https://stocksnap.io/photo/BIR9EBVX6K
+* https://stocksnap.io/photo/VHIX76K7EH
+* https://stocksnap.io/photo/MK72WQXVOE
+* https://stocksnap.io/photo/TDFUZEW0FS
+
+- Car Service
+* https://mystock.themeisle.com/photo/engine/
+* https://mystock.themeisle.com/photo/old-mini-cooper/
+
+- Museum
+* https://mystock.themeisle.com/photo/front-view-of-magasin-du-nord-copenhagen/
+
+- Art Exhibition
+* https://stocksnap.io/photo/TIHPAM0QFG
+* https://stocksnap.io/photo/I0CYW7MWNV
+* https://mystock.themeisle.com/photo/beautiful-painting-of-a-sunny-day-on-a-building/
+* https://mystock.themeisle.com/photo/rain-painting/
+
+- Conference
+* https://mystock.themeisle.com/photo/cityscape-of-new-york-2/
+* https://mystock.themeisle.com/photo/performing-artist-with-cool-projections-behind/
+* https://mystock.themeisle.com/photo/young-boy-attending-a-concert/
+
+- University
+* https://mystock.themeisle.com/photo/bruges-cityview/
+* https://mystock.themeisle.com/photo/front-view-of-magasin-du-nord-copenhagen/
+* https://mystock.themeisle.com/photo/metropolitan-museum/
+
+- Interior Design
+* https://mystock.themeisle.com/photo/couch-with-two-green-pillows/
+* https://mystock.themeisle.com/photo/bathtub-in-the-center-of-the-room/
+
+- Electronics Store
+* https://stocksnap.io/photo/FMGBFTLI2D
+* https://stocksnap.io/photo/6EMBFCXU0J
+* https://stocksnap.io/photo/4CLVYHVZ2L
+* https://stocksnap.io/photo/UHGLILBFLV
+* https://stocksnap.io/photo/PFHFKXTMYD
+* https://stocksnap.io/photo/M6XC5T3JY3
+* https://stocksnap.io/photo/XW2IM1GSYM
+* https://mystock.themeisle.com/photo/headphones/
+* https://mystock.themeisle.com/photo/programming-laptop-2/
+* https://stocksnap.io/photo/V89HFPEFN3
+
+- Print Shop
+* https://stocksnap.io/photo/LYU668ZB5A
+* https://stocksnap.io/photo/VYSZEM4UWE
+
+- City Tour
+* https://mystock.themeisle.com/photo/amsterdam-at-night/
+* https://mystock.themeisle.com/photo/copenhagen-canal-at-sunset/
+* https://mystock.themeisle.com/photo/colorful-buildings-in-copenhagen/
+* https://mystock.themeisle.com/photo/small-boat-on-copenhagen-canals/
+
+- Insurance
+* https://stocksnap.io/photo/FCUDWWBKFV
+* https://stocksnap.io/photo/FZ0NEWUBW5
+
+- Personal Blog
+* https://mystock.themeisle.com/photo/picnic/
+* https://stocksnap.io/photo/MN5CHRVUUR
+* https://mystock.themeisle.com/photo/gift-shops/
+
+- Travel Blog
+* https://mystock.themeisle.com/photo/copenhagen-canal-at-sunset/
+* https://mystock.themeisle.com/photo/colorful-boats-at-the-fishing-harbor-of-riomaggiore-cinque-terre-2/
+* https://mystock.themeisle.com/photo/blue-boat-docked-on-an-island-in-maldives/
+
+- DJ
+* https://stocksnap.io/photo/XAOL9EYTV8
+* https://stocksnap.io/photo/NBP6GJVR0M
+* https://mystock.themeisle.com/photo/graffiti-2/
+* https://mystock.themeisle.com/photo/young-boy-attending-a-concert/
+* https://mystock.themeisle.com/photo/bucharest-at-night/
+
+- Tech Lab
+* https://mystock.themeisle.com/photo/programming-laptop/
+* https://stocksnap.io/photo/C5BOQXAZ4N
+* https://stocksnap.io/photo/UEDSDSAWBQ
+* https://stocksnap.io/photo/APSRDPFZSR
+
+- Equitation
+* https://stocksnap.io/photo/AX5GC9QZR5
+* https://stocksnap.io/photo/3EV0OZ7ZJO
+
+- Restaurant 2
+* https://mystock.themeisle.com/photo/remember-the-wedding-gift/
+* https://mystock.themeisle.com/photo/cheesy-hamburger-with-french-fries/
+* https://mystock.themeisle.com/photo/fancy-restaurant/
+* https://mystock.themeisle.com/photo/indian-vegetable-grill-sandwich/
+
+- Fitness Trainer
+* https://stocksnap.io/photo/people-hiking-GGQX7WXAAC
+* https://stocksnap.io/photo/00RNNUWGLM
+
+- Music Band 2
+* https://stocksnap.io/photo/people-men-H80Z9EVEGA
+* https://stocksnap.io/photo/events-concert-1ZNLM71V1J
+
+- Perfume Shop
+* https://stocksnap.io/photo/chanel-perfume-KFMR70XLYS
+
+- Jewellery Shop 2
+* https://stocksnap.io/photo/woman-closeup-BIR9EBVX6K
+* https://stocksnap.io/photo/diamond-ring-V6XSRDWN2G
+* https://stocksnap.io/photo/still-items-NLSP8TGHFM
+
+- Copywriter
+* https://stocksnap.io/photo/man-smiling-X6BW9YMWXV
+
+- Boat Rental
+* https://stocksnap.io/photo/architecture-buildings-B7260BRVGS
+* https://stocksnap.io/photo/boat-ship-L584FW8XBR
+* https://mystock.themeisle.com/photo/three-boats-at-the-dock/
+* https://mystock.themeisle.com/photo/small-boat-on-copenhagen-canals/
+* https://mystock.themeisle.com/photo/blue-boat-docked-on-an-island-in-maldives/
+
+- Apparel
+* https://mystock.themeisle.com/photo/protest/
+* https://mystock.themeisle.com/photo/shopping-building-in-copenhagen-center/
+* https://mystock.themeisle.com/photo/grooms-suite/
+* https://mystock.themeisle.com/photo/mannequin/
+* https://stocksnap.io/photo/AOOC3CJARN
+* https://stocksnap.io/photo/HKTKMOVXNO
+
+- Pet Shop
+* https://mystock.themeisle.com/photo/buddy/
+* https://mystock.themeisle.com/photo/street-dog-sitting-on-a-beach/
+
+- Doctors 2
+* https://stocksnap.io/photo/city-buildings-VAGYAWK3PE
+* https://stocksnap.io/photo/chair-dentist-3J10QN5PTS
+* https://stocksnap.io/photo/stethoscope-medical-9M1HWW2JFV
+
+- Phychologist
+* https://stocksnap.io/photo/people-girls-Y2AHVPYB51
+* https://mystock.themeisle.com/photo/hammock-placed-between-two-poles-on-a-beach/
+
+- Book Shop
+* https://mystock.themeisle.com/photo/fireplace/
+* https://mystock.themeisle.com/photo/thinking-time/
+* https://mystock.themeisle.com/photo/volkswagen-vanagon/
+* https://mystock.themeisle.com/photo/programming-laptop-2/
+* https://mystock.themeisle.com/photo/temple-2/
+* https://stocksnap.io/photo/UA83K6Z0WY
+* https://stocksnap.io/photo/EB9B6BC1F6
+
+- Laundry Services
+* https://stocksnap.io/photo/laundry-laundromat-4876CF9B9C
+* https://stocksnap.io/photo/laundry-laundromat-611E343F6D
+* https://mystock.themeisle.com/photo/silk-scarfs/
+
+- Craft Beer
+* https://stocksnap.io/photo/beer-bottles-8HS0I30RUK
+* https://stocksnap.io/photo/wine-beer-C2988083A4
+
+- Gardening
+* https://mystock.themeisle.com/photo/distant-view-of-taj-mahal-surounded-by-nature/
+* https://stocksnap.io/photo/green-window-HYEGYZNLA6
+* https://mystock.themeisle.com/photo/trees-carefully-trimmed-into-geometrical-shapes-on-a-beach/
+
+- Resume 2
+* https://mystock.themeisle.com/photo/browser-tabs/
+* https://stocksnap.io/photo/man-interior-BXO1M5UBLM
+
+- Leather Shop
+* https://stocksnap.io/photo/bag-leather-DQCQ6W96UC
+* https://stocksnap.io/photo/brown-leather-9YGBJUD1FY
+* https://stocksnap.io/photo/shoes-shoelace-G2QXOYC0UN
+* https://stocksnap.io/photo/brown-leather-84G6CURMJ3
+* https://stocksnap.io/photo/guy-man-YK0PRWX6MC
+
+- Public Notary
+* https://mystock.themeisle.com/photo/vatican-streets/
+* https://mystock.themeisle.com/photo/scale-model-of-a-modern-building/
+
+- Pharmacy
+* https://stocksnap.io/photo/pills-medicine-I4P7JN8SCN
+* https://mystock.themeisle.com/photo/blox-building-in-copenhagen/
+
+- Investment Consulting
+* https://stocksnap.io/photo/man-outside-HBDZWHMZ6K
+* https://mystock.themeisle.com/photo/writers/

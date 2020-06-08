@@ -1,37 +1,36 @@
 <?php
 /**
- * The template for displaying all single posts and attachments.
+ * Author:          Andrei Baicus <andrei@themeisle.com>
+ * Created on:      28/08/2018
  *
- * @package Hestia
- * @since Hestia 1.0
+ * @package Neve
  */
+
+$container_class = apply_filters( 'neve_container_class_filter', 'container', 'single-post' );
 
 get_header();
 
-do_action( 'hestia_before_single_post_wrapper' );
 ?>
-
-<div class="<?php echo hestia_layout(); ?>">
-	<div class="blog-post blog-post-wrapper">
-		<div class="container">
-			<?php
-			if ( have_posts() ) :
-				while ( have_posts() ) :
-					the_post();
-					get_template_part( 'template-parts/content', 'single' );
-				endwhile;
-				else :
+	<div class="<?php echo esc_attr( $container_class ); ?> single-post-container">
+		<div class="row">
+			<?php do_action( 'neve_do_sidebar', 'single-post', 'left' ); ?>
+			<article id="post-<?php echo esc_attr( get_the_ID() ); ?>"
+					class="<?php echo esc_attr( join( ' ', get_post_class( 'nv-single-post-wrap col' ) ) ); ?>">
+				<?php
+				do_action( 'neve_before_post_content' );
+				if ( have_posts() ) {
+					while ( have_posts() ) {
+						the_post();
+						get_template_part( 'template-parts/content', 'single' );
+					}
+				} else {
 					get_template_part( 'template-parts/content', 'none' );
-			endif;
+				}
+				do_action( 'neve_after_post_content' );
 				?>
+			</article>
+			<?php do_action( 'neve_do_sidebar', 'single-post', 'right' ); ?>
 		</div>
 	</div>
-</div>
-
 <?php
-if ( ! is_singular( 'elementor_library' ) ) {
-	do_action( 'hestia_blog_related_posts' );
-}
-?>
-<div class="footer-wrapper">
-	<?php get_footer(); ?>
+get_footer();

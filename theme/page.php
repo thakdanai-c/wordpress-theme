@@ -1,35 +1,35 @@
 <?php
 /**
- * The template for displaying all single posts and attachments.
+ * The template for displaying all pages.
  *
- * @package Hestia
- * @since Hestia 1.0
+ * @package Neve
+ * @since   1.0.0
  */
+$container_class = apply_filters( 'neve_container_class_filter', 'container', 'single-page' );
 
 get_header();
 
-do_action( 'hestia_before_single_page_wrapper' );
-
 ?>
-<div class="<?php echo hestia_layout(); ?>">
-	<?php
-	$class_to_add = '';
-	if ( class_exists( 'WooCommerce', false ) && ! is_cart() ) {
-		$class_to_add = 'blog-post-wrapper';
-	}
-	?>
-	<div class="blog-post <?php esc_attr( $class_to_add ); ?>">
-		<div class="container">
+<div class="<?php echo esc_attr( $container_class ); ?> single-page-container">
+	<div class="row">
+		<?php do_action( 'neve_do_sidebar', 'single-page', 'left' ); ?>
+		<div class="nv-single-page-wrap col">
 			<?php
-			if ( have_posts() ) :
-				while ( have_posts() ) :
+			do_action( 'neve_before_page_header' );
+			do_action( 'neve_page_header', 'single-page' );
+			do_action( 'neve_before_content', 'single-page' );
+			if ( have_posts() ) {
+				while ( have_posts() ) {
 					the_post();
 					get_template_part( 'template-parts/content', 'page' );
-				endwhile;
-				else :
-					get_template_part( 'template-parts/content', 'none' );
-			endif;
-				?>
+				}
+			} else {
+				get_template_part( 'template-parts/content', 'none' );
+			}
+			do_action( 'neve_after_content', 'single-page' );
+			?>
 		</div>
+		<?php do_action( 'neve_do_sidebar', 'single-page', 'right' ); ?>
 	</div>
-	<?php get_footer(); ?>
+</div>
+<?php get_footer(); ?>

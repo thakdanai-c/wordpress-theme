@@ -1,12 +1,9 @@
 <?php
 /**
- * The default template for displaying content
+ * Author:          Andrei Baicus <andrei@themeisle.com>
+ * Created on:      27/08/2018
  *
- * Used for index/archive/search.
- *
- * @package Hestia
- * @since Hestia 1.0
+ * @package Neve
  */
 
-do_action( 'hestia_index_page_before_content' );
-do_action( 'hestia_blog_post_template_part', 'default' );
+do_action( 'neve_blog_post_template_part_content', 'single' );

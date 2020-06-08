@@ -127,9 +127,9 @@ class Ti_About_Page {
 			return;
 		}
 
-		$page_title = $theme['name'] . ' ' . __( 'Options', 'hestia' ) . ' ';
+		$page_title = $theme['name'] . ' ' . __( 'Options', 'neve' ) . ' ';
 
-		$menu_name        = $theme['name'] . ' ' . __( 'Options', 'hestia' ) . ' ';
+		$menu_name        = $theme['name'] . ' ' . __( 'Options', 'neve' ) . ' ';
 		$required_actions = $this->get_recommended_actions_left();
 		if ( $required_actions > 0 ) {
 			$menu_name .= '<span class="badge-action-count update-plugins">' . esc_html( $required_actions ) . '</span>';
@@ -215,7 +215,7 @@ class Ti_About_Page {
 				'ajaxurl'             => admin_url( 'admin-ajax.php' ),
 				'nonce'               => wp_create_nonce( 'ti-about-nonce' ),
 				'template_directory'  => get_template_directory_uri(),
-				'activating_string'   => esc_html__( 'Activating', 'hestia' ),
+				'activating_string'   => esc_html__( 'Activating', 'neve' ),
 			)
 		);
 

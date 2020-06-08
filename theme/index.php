@@ -1,91 +1,63 @@
 <?php
 /**
- * The main template file
+ * Index template.
  *
- * This is the most generic template file in a WordPress theme
- * and one of the two required files for a theme (the other being style.css).
- * It is used to display a page when nothing more specific matches a query.
- * e.g., it puts together the home page when no home.php file exists.
- *
- * Learn more: {@link https://codex.wordpress.org/Template_Hierarchy}
- *
- * @package Hestia
- * @since Hestia 1.0
- * @modified 1.1.30
+ * @package Neve
  */
+$container_class = apply_filters( 'neve_container_class_filter', 'container', 'blog-archive' );
 
 get_header();
 
-$default                 = hestia_get_blog_layout_default();
-$sidebar_layout          = apply_filters( 'hestia_sidebar_layout', get_theme_mod( 'hestia_blog_sidebar_layout', $default ) );
-$wrap_class              = apply_filters( 'hestia_filter_index_search_content_classes', 'col-md-8 blog-posts-wrap' );
-$alternative_blog_layout = get_theme_mod( 'hestia_alternative_blog_layout', 'blog_normal_layout' );
-$wrap_posts              = 'flex-row';
-if ( Hestia_Public::should_enqueue_masonry() === true ) {
-	$wrap_posts .= ' post-grid-display';
-}
-
-do_action( 'hestia_before_index_wrapper' ); ?>
-
-<div class="<?php echo hestia_layout(); ?>">
-	<div class="hestia-blogs" data-layout="<?php echo esc_attr( $sidebar_layout ); ?>">
-		<div class="container">
-			<?php
-
-			do_action( 'hestia_before_index_posts_loop' );
-			$paged         = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
-			$posts_to_skip = ( $paged === 1 ) ? apply_filters( 'hestia_filter_skipped_posts_in_main_loop', array() ) : array();
-
-			?>
-			<div class="row">
+?>
+	<div class="<?php echo esc_attr( $container_class ); ?> archive-container">
+		<div class="row">
+			<?php do_action( 'neve_do_sidebar', 'blog-archive', 'left' ); ?>
+			<div class="nv-index-posts blog col">
 				<?php
-				if ( $sidebar_layout === 'sidebar-left' ) {
-					get_sidebar();
-				}
-				?>
-				<div class="<?php echo esc_attr( $wrap_class ); ?>">
-					<?php
-					do_action( 'hestia_before_index_content' );
+				do_action( 'neve_before_loop' );
+				do_action( 'neve_page_header', 'index' );
+				do_action( 'neve_before_posts_loop' );
+				if ( have_posts() ) {
+					/* Start the Loop. */
+					echo '<div class="posts-wrapper row">';
 
-					$counter = 0;
-					if ( have_posts() ) {
-						echo '<div class="' . esc_attr( $wrap_posts ) . '">';
-						while ( have_posts() ) {
-							the_post();
-							$counter ++;
-							$pid = get_the_ID();
-							if ( ! empty( $posts_to_skip ) && in_array( $pid, $posts_to_skip, true ) ) {
-								$counter ++;
-								continue;
-							}
-							if ( $alternative_blog_layout === 'blog_alternative_layout2' ) {
-								get_template_part( 'template-parts/content', 'alternative-2' );
-							} elseif ( ( $alternative_blog_layout === 'blog_alternative_layout' ) && ( $counter % 2 === 0 ) ) {
-								get_template_part( 'template-parts/content', 'alternative' );
-							} else {
-								get_template_part( 'template-parts/content' );
-							}
+
+					$pagination_type = get_theme_mod( 'neve_pagination_type', 'number' );
+					if ( $pagination_type !== 'infinite' ) {
+						global $wp_query;
+
+						$posts_on_current_page = $wp_query->post_count;
+						$hook_after_post       = -1;
+
+						if ( $posts_on_current_page >= 2 ) {
+							$hook_after_post = intval( ceil( $posts_on_current_page / 2 ) );
 						}
-						echo '</div>';
-						$hestia_pagination_type = get_theme_mod( 'hestia_pagination_type', 'number' );
-						if ( $hestia_pagination_type === 'number' ) {
-							do_action( 'hestia_before_pagination' );
-							the_posts_pagination();
-							do_action( 'hestia_after_pagination' );
-						}
-					} else {
-						get_template_part( 'template-parts/content', 'none' );
+						$post_index = 1;
 					}
-					?>
-				</div>
-				<?php
-				if ( $sidebar_layout === 'sidebar-right' ) {
-					get_sidebar();
+					while ( have_posts() ) {
+						the_post();
+						get_template_part( 'template-parts/content', get_post_type() );
+
+						if ( $pagination_type !== 'infinite' ) {
+							if ( $post_index === $hook_after_post && $hook_after_post !== - 1 ) {
+								do_action( 'neve_middle_posts_loop' );
+							}
+							$post_index ++;
+						}
+					}
+					echo '</div>';
+					if ( ! is_singular() ) {
+						do_action( 'neve_do_pagination', 'blog-archive' );
+					}
+				} else {
+					get_template_part( 'template-parts/content', 'none' );
 				}
 				?>
+				<div class="w-100"></div>
+				<?php do_action( 'neve_after_posts_loop' ); ?>
 			</div>
+			<?php do_action( 'neve_do_sidebar', 'blog-archive', 'right' ); ?>
 		</div>
 	</div>
-	<?php do_action( 'hestia_after_archive_content' ); ?>
-
-	<?php get_footer(); ?>
+<?php
+get_footer();

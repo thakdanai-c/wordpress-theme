@@ -1,13 +1,9 @@
 <?php
 /**
- * The default template for displaying content on page builders templates.
+ * Author:          Andrei Baicus <andrei@themeisle.com>
+ * Created on:      28/08/2018
  *
- * Used for page builder full width and page builder blank.
- *
- * @package Hestia
- * @since Hestia 1.1.24
- * @author Themeisle
- */ ?>
-<article id="post-<?php the_ID(); ?>" class="section pagebuilder-section">
-	<?php the_content(); ?>
-</article>
+ * @package Neve
+ */
+
+the_content();

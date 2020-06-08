@@ -4,35 +4,17 @@
  *
  * Displays all of the head element and everything up until the page header div.
  *
- * @package Hestia
- * @since Hestia 1.0
+ * @package Neve
+ * @since   1.0.0
  */
-$wrapper_div_classes = 'wrapper ';
-if ( is_single() ) {
-	$wrapper_div_classes .= join( ' ', get_post_class() );
-}
 
-$layout               = apply_filters( 'hestia_header_layout', get_theme_mod( 'hestia_header_layout', 'default' ) );
-$disabled_frontpage   = get_theme_mod( 'disable_frontpage_sections', false );
-$wrapper_div_classes .=
-	(
-		( is_front_page() && ! is_page_template() && ! is_home() && false === (bool) $disabled_frontpage ) ||
-		( class_exists( 'WooCommerce', false ) && ( is_product() || is_product_category() ) ) ||
-		( is_archive() && ( class_exists( 'WooCommerce', false ) && ! is_shop() ) )
-	) ? '' : ' ' . $layout . ' ';
-
-$header_class = '';
-$hide_top_bar = get_theme_mod( 'hestia_top_bar_hide', true );
-if ( (bool) $hide_top_bar === false ) {
-	$header_class .= 'header-with-topbar';
-}
-
+$header_classes = apply_filters( 'nv_header_classes', 'header' );
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 
 <head>
-	<meta charset='<?php bloginfo( 'charset' ); ?>'>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<?php if ( is_singular() && pings_open( get_queried_object() ) ) : ?>
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
@@ -40,14 +22,27 @@ if ( (bool) $hide_top_bar === false ) {
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
-	<?php wp_body_open(); ?>
-	<div class="<?php echo esc_attr( $wrapper_div_classes ); ?>">
-		<header class="header <?php echo esc_attr( $header_class ); ?>">
-			<?php
-			hestia_before_header_trigger();
-			do_action( 'hestia_do_top_bar' );
-			do_action( 'hestia_do_header' );
-			hestia_after_header_trigger();
-			?>
-		</header>
+<body  <?php body_class(); ?> <?php neve_body_attrs(); ?> >
+<?php wp_body_open(); ?>
+<div class="wrapper">
+	<?php neve_before_header_wrapper_trigger(); ?>
+	<header class="<?php echo esc_attr( $header_classes ); ?>" role="banner">
+		<a class="neve-skip-link show-on-focus" href="#content" tabindex="0">
+			<?php echo __( 'Skip to content', 'neve' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+		</a>
+		<?php
+		neve_before_header_trigger();
+		if ( apply_filters( 'neve_filter_toggle_content_parts', true, 'header' ) === true ) {
+			do_action( 'neve_do_header' );
+		}
+		neve_after_header_trigger();
+		?>
+	</header>
+	<?php neve_after_header_wrapper_trigger(); ?>
+	<?php do_action( 'neve_before_primary' ); ?>
+
+	<main id="content" class="neve-main" role="main">
+
+<?php
+do_action( 'neve_after_primary_start' );
+

@@ -2,9 +2,9 @@
 /**
  * 404 template.
  *
- * @package Hestia
+ * @package Neve
  */
 
 get_header();
-do_action( 'hestia_do_404' );
+do_action( 'neve_do_404' );
 get_footer();
