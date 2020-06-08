@@ -6,6 +6,10 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    '957c51f8f334b5ea3be310bfb8b3492c' => $vendorDir . '/codeinwp/themeisle-sdk/load.php',
-    '54cb72d62732e1d172a1d1c3d9e97705' => $vendorDir . '/codeinwp/themeisle-sdk/load.php',
+    '3c811c5eee2f69449ba771bff79ea54a' => $vendorDir . '/codeinwp/ti-about-page/load.php',
+    'f8d67938f2acd4847c9f112049168b79' => $vendorDir . '/codeinwp/ti-white-label/load.php',
+    '7869ca515c4ceca547c62b2a83a7f62a' => $vendorDir . '/codeinwp/themeisle-sdk/load.php',
+    '19201bcde042bd01d694ceb01e4d0efb' => $vendorDir . '/codeinwp/ti-about-page/load.php',
+    'fcbf29e5d7ab766a6d238fa954d70ae8' => $vendorDir . '/codeinwp/ti-onboarding/load.php',
+    '26bd710e19d56cb959fcc5903e310d68' => $vendorDir . '/codeinwp/ti-white-label/load.php',
 );
